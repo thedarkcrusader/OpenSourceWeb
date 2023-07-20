@@ -21,6 +21,7 @@
 						var/turf/belowerer = locate(belower.x, belower.y, belower.z-1)
 						if(istype(belowerer, /turf/simulated/floor/open))
 							var/turf/belowerer2 = locate(belower.x, belower.y, belower.z-1)
+							T.vis_contents += belowerer2
 						else
 							T.vis_contents += belowerer
 					else

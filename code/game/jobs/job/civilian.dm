@@ -1077,10 +1077,6 @@
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/cheap(H), slot_wrist_r)
 		H.add_perk(/datum/perk/illiterate)
 		H.add_perk(/datum/perk/morestamina)
-		if(prob(80))
-			H.virgin = FALSE
-			if(prob(20))
-				H.contract_disease(new /datum/disease/aids,1,0)
 		return 1
 
 /datum/job/scuff

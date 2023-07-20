@@ -213,35 +213,7 @@
 		return
 
 
-/obj/item/weapon/kitchen/utensil/knife/flaying
-	name = "flaying knife"
-	desc = "used to flay skin."
-	icon_state = "skinning"
 
-/obj/item/weapon/kitchen/utensil/knife/flaying/attack(mob/living/carbon/human/H as mob, mob/user as mob)
-	if (depotenzia(H, user))
-		return
-
-	if(ishuman(H) && user.zone_sel.selecting != "groin")
-		var/datum/organ/external/affecting = H.get_organ(ran_zone(user.zone_sel.selecting))
-
-		if(!affecting.skin)
-			to_chat(user, "<span class='notice'>[H] doesn't have any skin left!</span>")
-			return
-		if(affecting.skin)
-			H.visible_message("<span class='danger'>[user] starts to flay [H]'s skin with [src]!</span>")
-			H.custom_pain("[pick("OH [uppertext(H.god_text())] MY SKIN!!", "OH [uppertext(H.god_text())] WHY!")]", 100)
-			H.emote("agonyscream")
-			if(do_after(user, 66))
-				H.visible_message("<span class='danger'>[user] flays [H]'s skin with [src]!</span>")
-				H.custom_pain("[pick("OH IT HURTS SO MUCH!!", "WHAT HAVE I DONE!")]", 100)
-				H.apply_damage(rand(5, 10), BRUTE, affecting)
-				H.emote("agonyscream")
-				affecting.skin = 0
-				if(H.stat == DEAD)
-					return
-				if(H.buckled && istype(H.buckled, /obj/structure/stool/bed/chair/comfy/torture))
-					H.client.ChromieWinorLoose(H.client, -1)
 
 
 

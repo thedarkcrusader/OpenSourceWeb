@@ -236,24 +236,6 @@ datum/reagent/vaccine
 		return
 
 
-datum/reagent/semen
-	name = "Semen"
-	id = "semen"
-	description = "Sperm from someone."
-	reagent_state = LIQUID
-	color = "#FFFFFF" // rgb: 255, 255, 255
-	metabolization_rate = 0.01
-
-datum/reagent/semen/on_mob_life(var/mob/living/M as mob)
-	//M.bladder += nutriment_factor
-	if(ticker.eof.id == "freshmalemilk")
-		M.hidratacao += 30
-		M.nutrition += 5
-	..()
-	return
-
-datum/reagent/semen/reaction_turf(var/turf/T)
-	new/obj/effect/decal/cleanable/cum(T)
 
 datum/reagent/water
 	name = "Water"

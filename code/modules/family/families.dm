@@ -109,10 +109,10 @@
 				if(19 to INFINITY)
 					family_type = "Mother"
 
-	//Handle marriage
-	if((family_type == "Brother" || family_type == "Sister") && !spouse && (owner.age >= 18 && target.age >= 18) && !(owner.has_penis() && target.has_penis())) //If we are the same age but different gender, but don't have a spouse, marry us!
+//	Handle marriage
+	if((family_type == "Brother" || family_type == "Sister") && !spouse && (owner.age >= 18 && target.age >= 18) && !(owner.gender == MALE) && target.gender == MALE) //If we are the same age but different gender, but don't have a spouse, marry us!
 		spouse = target
-		if(owner.has_penis())
+		if(owner.gender == MALE)
 			family_type = "Husband"
 		else
 			family_type = "Wife"

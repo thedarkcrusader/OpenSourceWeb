@@ -137,21 +137,21 @@
 					else if(prob(50))
 						new /obj/item/clothing/ears/earring/copper(src)
 					else
-						new /obj/item/weapon/dildo/copper(src)
+						new /obj/item/clothing/head/amulet/gorget(src)
 				if("Gold")
 					if(prob(50))
 						new /obj/item/clothing/head/amulet/goldeneck(src)
 					else if(prob(50))
 						new /obj/item/weapon/censer(src)
 					else
-						new /obj/item/weapon/dildo/goldeb(src)
+						new /obj/item/clothing/head/amulet/gorget(src)
 				if("Iron")
 					if(prob(50))
 						new /obj/item/clothing/head/amulet/holy/cross(src)
 					else if(prob(50))
 						new /obj/item/clothing/head/amulet/gorget/iron(src)
 					else
-						new /obj/item/weapon/dildo(src)
+						new /obj/item/clothing/head/amulet/gorget(src)
 
 	return
 

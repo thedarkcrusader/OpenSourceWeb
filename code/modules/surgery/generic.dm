@@ -119,7 +119,7 @@
 		if (affected.status & ORGAN_DESTROYED)
 			return 0
 		if(target_zone == "groin")
-			if(!(target.has_penis()))
+			if(target.gender != MALE)
 				return 0
 		return target_zone != "chest" && target_zone != "head"
 

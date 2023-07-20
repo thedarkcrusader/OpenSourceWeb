@@ -116,8 +116,7 @@
 		item_state = "cutters_yellow"
 
 /obj/item/weapon/wirecutters/attack(mob/living/carbon/C as mob, mob/user as mob)
-	if (depotenzia(C, user))
-		return
+
 
 	if(ishuman(C) && user.zone_sel.selecting == "mouth")
 		var/mob/living/carbon/human/H = C

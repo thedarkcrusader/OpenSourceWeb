@@ -89,22 +89,7 @@
 	metabolization_rate = 0.01
 	color = "#3d3232"
 
-/datum/reagent/lutetium
-	name = "Lutetium"
-	id = "lutetium"
-	reagent_state = LIQUID
-	metabolization_rate = 0.01
-	color = "#FFC0CB"
 
-/datum/reagent/lutetium/on_mob_life(var/mob/living/M as mob, var/alien)
-	..()
-	if(!istype(M))
-		return
-	if(!istype(M, /mob/living/carbon/human))
-		return
-	var/mob/living/carbon/human/H = M
-	if(H.lust)
-		H.lust -= 1
 
 /datum/reagent/barium
 	name = "Barium"
