@@ -542,6 +542,7 @@ datum/mind
 					var/spawnpoint
 					new_character.key = key
 					new_character.gender = MALE
+					new_character.f_style = "Very Long Beard"
 					special_role = "Soulbreaker"
 					//ticker.mode.learn_basic_spells(current)
 					log_admin("[key_name_admin(usr)] has soulbreaker'ed [new_character.key].")
