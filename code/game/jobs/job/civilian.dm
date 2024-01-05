@@ -726,20 +726,6 @@
 			to_chat(src, "<span class='combat'>They already have a nickname!</span>")
 			return
 
-		log_game("([src.ckey])[src.real_name] gave ([M.ckey])[M.real_name] the nickname: [responseTwo]")
-		if(findtext(responseTwo, config.ic_filter_regex))
-			src << 'vam_ban.ogg'
-			to_chat("THAT'S SO FUNNY!")
-			var/datum/organ/internal/heart/HE = (locate() in internal_organs)
-			if(HE)
-				src.emote("laugh")
-				HE.heart_attack()
-			else
-				src.gib()
-			bans.Add(src.client.ckey)
-			sleep(30)
-			qdel(src.client)
-			return
 		visible_message("[src.name] gave [M.name] the nickname: [responseTwo]")
 		M.nickname = responseTwo
 
