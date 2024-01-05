@@ -268,6 +268,15 @@ datum/mind
 
 			/** SOULBREAKER ***/
 
+			text = "soulbreaker"
+			if (ticker.mode.config_tag=="soulbreaker")
+				text = uppertext(text)
+			text = "<i><b>[text]</b></i>: "
+			text += "<a href='?src=\ref[src];soulbreaker=soulbreaker'>yes</a>|<b>NO</b>"
+			sections["soulbreaker"] = text
+
+			/** VAMPIRE ***/
+
 			text = "vampire"
 			if (ticker.mode.config_tag=="vampire")
 				text = uppertext(text)
@@ -531,8 +540,6 @@ datum/mind
 					new_character.gender = MALE
 					special_role = "Soulbreaker"
 					//ticker.mode.learn_basic_spells(current)
-					to_chat(new_character, "<span class='dreamershitfuckcomicao1'>Você é um soulbreaker.</span")
-					to_chat(new_character, "<span class='dreamershitfuckcomicao1'>Você escraviza pessoas vivas para que possam restaurar planetas perdidos. Você tem muitas ferramentas para fazer isso, então deve ser fácil capturar o migrante comum.</span>")
 					log_admin("[key_name_admin(usr)] has soulbreaker'ed [new_character.key].")
 					new_character << sound('sound/music/soulbreaker.ogg', repeat = 0, wait = 0, volume = 80, channel = 3)
 					new_character.my_skills.CHANGE_SKILL(SKILL_MELEE, rand(3,6))
