@@ -538,7 +538,7 @@ datum/mind
 					var/soulbreaker_name = pick(soulbreaker_first)
 					var/randomname = "[soulbreaker_name]"
 					spawn(0)
-					var/newname = sanitize(input(wizard_mob, "You are a Soulbreaker. Bring Allah many slaves.", randomname) as null|text)
+					var/newname = sanitize(input("You are a Soulbreaker. Bring Allah many slaves.", randomname) as null|text)
 					var/spawnpoint
 					new_character.key = key
 					new_character.gender = MALE
