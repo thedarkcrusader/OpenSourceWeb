@@ -533,8 +533,12 @@ datum/mind
 			switch(href_list["soulbreaker"])
 				if("soulbreaker")
 					//var/mob/living/carbon/human/H = current
+					var/list/soulbreaker_first = file2list("config/names/soulbreakerfirst.txt")
 					var/mob/living/carbon/human/new_character = new(pick(latejoin))
-					var/list/pick_the_name = list("Bashar Ahmeed","Abu Marzook", "Abdul-Rashid","Eunuch","Jihad-Rashid")
+					var/soulbreaker_name = pick(soulbreaker_first)
+					var/randomname = "[soulbreaker_name]"
+					spawn(0)
+					var/newname = sanitize(input(wizard_mob, "You are a Soulbreaker. Bring Allah many slaves.", randomname) as null|text)
 					var/spawnpoint
 					new_character.key = key
 					new_character.gender = MALE
@@ -544,7 +548,6 @@ datum/mind
 					new_character << sound('sound/music/soulbreaker.ogg', repeat = 0, wait = 0, volume = 80, channel = 3)
 					new_character.my_skills.CHANGE_SKILL(SKILL_MELEE, rand(3,6))
 					new_character.my_skills.CHANGE_SKILL(SKILL_RANGE, rand(3,6))
-					new_character.name = pick(pick_the_name)
 					new_character.age = rand(24,45)
 					new_character.voicetype = "strong"
 					new_character.my_stats.st = rand(10,16)
