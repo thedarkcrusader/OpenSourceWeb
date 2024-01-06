@@ -1256,7 +1256,7 @@
 /mob/living/carbon/human/verb/the_gat()
 	set name = "Get Out The Gat"
 	set desc= "How bout that pricks face when he saw da gat"
-	set category = "Consyte"
+	set category = "Tony"
 
 	to_chat(src, "They're still alive.")
 
