@@ -63,7 +63,7 @@
 		if("Bum")
 			text += "<a href='#' id='tellTheTruth'>Tell the Truth<br></a>"
 		if("Tony Soprano")
-			text += "<a href='#' id='getThegat'>Get The Gat<br></a>"
+			text += "<a href='#' id='the_gat'>Get The Gat<br></a>"
 		if("Urchin")
 			text += "<a href='#' id='tellTheTruth'>Tell the Truth<br></a>"
 		if("Migrant")
