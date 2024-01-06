@@ -1219,6 +1219,98 @@
 
 
 /datum/job/lawyer
+	title = "Tony Soprano"
+	titlebr = "Patriarca"
+	flag = LAWYER
+	department_head = list("Duke")
+	department_flag = CIVILIAN
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the baron and the northern law"
+	selection_color = "#dddddd"
+	access = list(keep,courtroom)
+	minimal_access = list(keep,courtroom)
+	sex_lock = MALE
+	jobdesc = "The most respected man in the fortress outside of the Baron himself. He is one of the eldest residents, with a large family to show for it. He handles domestic disputes and ensures that the law is adhered. Residents often find themselves coming to him for advice."
+	latejoin_locked = FALSE
+	thanati_chance = 75
+	equip(var/mob/living/carbon/human/H)
+		if(!H)
+			return 0
+		..()
+		H.voicetype = "noble"
+		H.verbs += /mob/living/carbon/human/proc/getThegat
+		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/internalaffairs(H), slot_wear_suit)
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/merc_boots(H), slot_shoes)
+		H.combat_music = pick('jester_combat.ogg')
+		H.create_kg()
+//		H.verbs += /mob/living/carbon/human/proc/execution
+//		H.verbs += /mob/living/carbon/human/proc/great_hunt
+//		H.verbs += /mob/living/carbon/human/proc/duel
+		return 1
+
+
+/mob/living/carbon/human/verb/the_gat()
+	set name = "Get Out The Gat"
+	set desc= "How bout that pricks face when he saw da gat"
+	set category = "Tony"
+
+	to_chat(src, "They're still alive.")
+
+
+/mob/living/carbon/human/proc/execution()
+	set hidden = 0
+	set category = "Law"
+	set name = "Execucao"
+	set desc="Executa alguém."
+	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
+	if(!input)
+		return
+	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
+		return
+	world << sound('sound/AI/judgement.ogg')
+	command_alert("<b>[input]</b> will be executed in court.", "Tony Soprano [src] & South's Law");
+	log_admin("[key_name(src)] has declared execution on someone: [input]")
+	message_admins("[key_name_admin(src)] has created a execution report", 1)
+
+/mob/living/carbon/human/proc/duel()
+	set hidden = 0
+	set category = "Law"
+	set name = "Duelo"
+	set desc="Bota pessoas para duelar."
+	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
+	var/input2 = sanitize_uni(input(usr, "Nome do outro juglado.", "What?", "") as message|null)
+	if(!input)
+		return
+	if(!input2)
+		return
+	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
+		return
+	world << sound('sound/AI/judgement.ogg')
+	command_alert("<b>[input]</b> e <b>[input2]</b> will duel to their death.", "Tony Soprano [src] & South's Law")
+	log_admin("[key_name(src)] has declared execution on someone: [input]")
+	message_admins("[key_name_admin(src)] has created a execution report", 1)
+
+/mob/living/carbon/human/proc/great_hunt()
+	set hidden = 0
+	set category = "Law"
+	set name = "Cacada"
+	set desc="Caça alguém."
+	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
+	if(!input)
+		return
+	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
+		return
+	world << sound('sound/AI/judgement.ogg')
+	command_alert("A great hunt has been declared on <b>[input]</b>", "Tony Soprano [src] & South's Law")
+	log_admin("[key_name(src)] has declared a great hunt on someone: [input]")
+	message_admins("[key_name_admin(src)] has created a great hunt report", 1)
+//Copy of the OG Patriarch in case SOMEBODY dislikes tony being here
+/*
+/datum/job/lawyer
 	title = "Patriarch"
 	titlebr = "Patriarca"
 	flag = LAWYER
@@ -1244,56 +1336,10 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/internalaffairs(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/merc_boots(H), slot_shoes)
+		H.combat_music = pick('jester_combat.ogg')
 		H.create_kg()
 //		H.verbs += /mob/living/carbon/human/proc/execution
 //		H.verbs += /mob/living/carbon/human/proc/great_hunt
 //		H.verbs += /mob/living/carbon/human/proc/duel
 		return 1
-
-/mob/living/carbon/human/proc/execution()
-	set hidden = 0
-	set category = "Law"
-	set name = "Execucao"
-	set desc="Executa alguém."
-	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
-	if(!input)
-		return
-	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
-		return
-	world << sound('sound/AI/judgement.ogg')
-	command_alert("<b>[input]</b> will be executed in court.", "Patriarch [src] & South's Law");
-	log_admin("[key_name(src)] has declared execution on someone: [input]")
-	message_admins("[key_name_admin(src)] has created a execution report", 1)
-
-/mob/living/carbon/human/proc/duel()
-	set hidden = 0
-	set category = "Law"
-	set name = "Duelo"
-	set desc="Bota pessoas para duelar."
-	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
-	var/input2 = sanitize_uni(input(usr, "Nome do outro juglado.", "What?", "") as message|null)
-	if(!input)
-		return
-	if(!input2)
-		return
-	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
-		return
-	world << sound('sound/AI/judgement.ogg')
-	command_alert("<b>[input]</b> e <b>[input2]</b> will duel to their death.", "Patriarch [src] & South's Law")
-	log_admin("[key_name(src)] has declared execution on someone: [input]")
-	message_admins("[key_name_admin(src)] has created a execution report", 1)
-
-/mob/living/carbon/human/proc/great_hunt()
-	set hidden = 0
-	set category = "Law"
-	set name = "Cacada"
-	set desc="Caça alguém."
-	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
-	if(!input)
-		return
-	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
-		return
-	world << sound('sound/AI/judgement.ogg')
-	command_alert("A great hunt has been declared on <b>[input]</b>", "Patriarch [src] & South's Law")
-	log_admin("[key_name(src)] has declared a great hunt on someone: [input]")
-	message_admins("[key_name_admin(src)] has created a great hunt report", 1)
+*/
