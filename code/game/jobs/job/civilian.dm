@@ -1240,12 +1240,13 @@
 			return 0
 		..()
 		H.voicetype = "noble"
-		H.verbs += /mob/living/carbon/human/proc/getThegat
+		H.verbs += /mob/living/carbon/human/proc/the_gat
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/internalaffairs(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/merc_boots(H), slot_shoes)
-		H.combat_music = pick('jester_combat.ogg')
+		H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/pistol/jester(H), slot_r_hand)
+		H.combat_music = 'sound/lfwbsounds/bloodlust1.ogg'
 		H.create_kg()
 //		H.verbs += /mob/living/carbon/human/proc/execution
 //		H.verbs += /mob/living/carbon/human/proc/great_hunt
@@ -1253,10 +1254,11 @@
 		return 1
 
 
-/mob/living/carbon/human/verb/the_gat()
-	set name = "Get Out The Gat"
-	set desc= "How bout that pricks face when he saw da gat"
+/mob/living/carbon/human/proc/the_gat()
+	set hidden = 0
 	set category = "Tony"
+	set name = "the_gat"
+	set desc="Get Out Da Gat"
 
 	to_chat(src, "They're still alive.")
 

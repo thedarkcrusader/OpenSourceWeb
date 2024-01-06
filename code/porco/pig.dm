@@ -63,7 +63,7 @@
 		if("Bum")
 			text += "<a href='#' id='tellTheTruth'>Tell the Truth<br></a>"
 		if("Tony Soprano")
-			text += "<a href='#' id='getThegat'>Get The Gat<br></a>"
+			text += "<a href='#' id='the_gat'>Get The Gat<br></a>"
 		if("Urchin")
 			text += "<a href='#' id='tellTheTruth'>Tell the Truth<br></a>"
 		if("Migrant")
@@ -315,6 +315,10 @@
 
 		if(H.job == "Bum" || H.old_job == "Bum")
 			verbs += list(list("tellTheTruth", "Tell the Truth"))
+
+		if(H.job == "Tony Soprano" || H.old_job == "Tony Soprano")
+			verbs += list(list("the_gat", "Get Out Da Gat"))
+
 
 		if(H.job == "Urchin" || H.old_job == "Urchin")
 			verbs += list(list("tellTheTruth", "Tell the Truth"))
