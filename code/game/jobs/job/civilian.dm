@@ -1246,7 +1246,7 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/internalaffairs(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/merc_boots(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/pistol/jester(H), slot_r_hand)
-		H.combat_music = 'haruspex-combat.ogg'
+		H.combat_music = 'sound/lfwbsounds/bloodlust1.ogg'
 		H.create_kg()
 //		H.verbs += /mob/living/carbon/human/proc/execution
 //		H.verbs += /mob/living/carbon/human/proc/great_hunt
