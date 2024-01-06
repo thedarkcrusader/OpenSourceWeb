@@ -399,7 +399,7 @@
 
 //Internal Affairs
 /obj/item/clothing/suit/storage/internalaffairs
-	name = "Patriarch's coat"
+	name = "Tony Soprano's coat"
 	desc = "A smooth and long jacket."
 	icon_state = "patriarch"
 	item_state = "patriarch"

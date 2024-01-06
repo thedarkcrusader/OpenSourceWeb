@@ -319,6 +319,12 @@
 	spawn(12)
 		truthcooldown = FALSE
 
+/mob/living/carbon/human/proc/getThegat()
+	set name = "getThegat"
+	set background = 1
+	to_chat(src, "aasa")
+
+
 /mob/living/carbon/human/GetVoice()
 	if(istype(src.wear_mask, /obj/item/clothing/mask/gas/voice))
 		var/obj/item/clothing/mask/gas/voice/V = src.wear_mask
