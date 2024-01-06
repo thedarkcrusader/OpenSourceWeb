@@ -188,7 +188,7 @@
 	src.buckled_mob = M
 	src.add_fingerprint(user)
 	var/mob/living/carbon/human/H = usr
-	if(H.job == "Patriarch")
+	if(H.job == "Tony Soprano")
 		H.verbs += /mob/living/carbon/human/proc/execution
 		H.verbs += /mob/living/carbon/human/proc/great_hunt
 		H.verbs += /mob/living/carbon/human/proc/duel
@@ -201,7 +201,7 @@
 			buckled_mob.update_canmove()
 			buckled_mob = null
 	var/mob/living/carbon/human/H = usr
-	if(H.job == "Patriarch")
+	if(H.job == "Tony Soprano")
 		H.verbs -= /mob/living/carbon/human/proc/execution
 		H.verbs -= /mob/living/carbon/human/proc/great_hunt
 		H.verbs -= /mob/living/carbon/human/proc/duel
