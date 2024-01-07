@@ -542,8 +542,8 @@ datum/mind
 					R.set_frequency(SYND_FREQ)
 					new_character.equip_to_slot_or_del(R, slot_wrist_r)
 					new_character.microbomb_soulbreaker()
-					new_character.key = OO.key
-					new_character.mind.key = OO.key
+					new_character.key = key
+					new_character.mind.key = key
 					new_character.gender = MALE
 					new_character.f_style = "Very Long Beard"
 					to_chat(new_character, "<span class='objectivesbig'>You're a soulbreaker.</span>")
