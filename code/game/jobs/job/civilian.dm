@@ -1225,8 +1225,8 @@
 	department_head = list("Duke")
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	//total_positions = 1
+	//spawn_positions = 1
 	supervisors = "the baron and the northern law"
 	selection_color = "#dddddd"
 	access = list(keep,courtroom)
