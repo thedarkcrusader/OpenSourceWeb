@@ -532,38 +532,52 @@ datum/mind
 		else if (href_list["soulbreaker"])
 			switch(href_list["soulbreaker"])
 				if("soulbreaker")
-					//var/mob/living/carbon/human/H = current
-					var/list/soulbreaker_first = file2list("config/names/soulbreakerfirst.txt")
 					var/mob/living/carbon/human/new_character = new(pick(latejoin))
-					var/soulbreaker_name = pick(soulbreaker_first)
-					var/randomname = "[soulbreaker_name]"
-					spawn(0)
-					var/newname = sanitize(input("You are a Soulbreaker. Bring Allah many slaves.", randomname) as null|text)
-					var/spawnpoint
-					new_character.key = key
+					log_game("[new_character.real_name]/[new_character.key] spawned as Soulbreaker.")
+					new_character.add_perk(/datum/perk/ref/strongback)
+					new_character.add_perk(/datum/perk/morestamina)
+					new_character.equip_to_slot_or_del(new /obj/item/weapon/card/id/ltgrey(new_character), slot_wear_id)
+					new_character.equip_to_slot_or_del(new /obj/item/clothing/under/rank/soulbreaker(new_character), slot_w_uniform)
+					var/obj/item/device/radio/R = new /obj/item/device/radio/headset/bracelet/soulbreaker(src)
+					R.set_frequency(SYND_FREQ)
+					new_character.equip_to_slot_or_del(R, slot_wrist_r)
+					new_character.microbomb_soulbreaker()
+					new_character.key = OO.key
+					new_character.mind.key = OO.key
 					new_character.gender = MALE
 					new_character.f_style = "Very Long Beard"
-					special_role = "Soulbreaker"
-					//ticker.mode.learn_basic_spells(current)
-					log_admin("[key_name_admin(usr)] has soulbreaker'ed [new_character.key].")
+					to_chat(new_character, "<span class='objectivesbig'>You're a soulbreaker.</span>")
+					to_chat(new_character, "<span class='objectives'>Fulfil the CR quota and break the minds and wills of the kafir in the name of the Allahopressor.</span>")
 					new_character << sound('sound/music/soulbreaker.ogg', repeat = 0, wait = 0, volume = 80, channel = 3)
-					new_character.my_skills.CHANGE_SKILL(SKILL_MELEE, rand(3,6))
-					new_character.my_skills.CHANGE_SKILL(SKILL_RANGE, rand(3,6))
+					new_character.my_skills.CHANGE_SKILL(SKILL_MELEE, 11)
+					new_character.my_skills.CHANGE_SKILL(SKILL_RANGE, 11)
+					new_character.my_skills.CHANGE_SKILL(SKILL_UNARM,rand(1,3))
+					new_character.my_skills.CHANGE_SKILL(SKILL_SURG,rand(0,0))
+					new_character.my_skills.CHANGE_SKILL(SKILL_MASON, 8)
+					new_character.my_skills.CHANGE_SKILL(SKILL_CRAFT, 8)
+					new_character.my_skills.CHANGE_SKILL(SKILL_MEDIC,rand(0,0))
+					new_character.my_skills.CHANGE_SKILL(SKILL_CLIMB,rand(13,13))
+					new_character.my_skills.CHANGE_SKILL(SKILL_SWIM,rand(11,12))
+					new_character.my_skills.CHANGE_SKILL(SKILL_OBSERV, rand(11,11))
+					new_character.my_skills.CHANGE_SKILL(SKILL_SURVIV, rand(11,11))
+					new_character.my_stats.st = rand(13,14)
+					new_character.my_stats.ht = rand(13,14)
+					new_character.my_stats.it = rand(9,10)
+					new_character.my_stats.dx = rand(9,10)
+					new_character.old_job = "Soulbreaker"
+					new_character.name = pick(soulbreaker_names)
+					soulbreaker_names.Remove(new_character.name)
+					new_character.real_name = new_character.name
+					new_character.voice_name = new_character.real_name
+					new_character.vice = pick(VicesList)
 					new_character.age = rand(24,45)
 					new_character.voicetype = "strong"
-					new_character.my_stats.st = rand(10,16)
-					new_character.my_stats.dx = rand(10,15)
-					new_character.my_stats.ht = rand(10,16)
 					new_character.religion = "Allah"
-					spawnpoint = pick(1,2,3,4)
-					if(spawnpoint == 1)
-						new_character.Move(locate(8,59,5))
-					else if(spawnpoint == 2)
-						new_character.Move(locate(9,59,5))
-					else if(spawnpoint == 3)
-						new_character.Move(locate(10,59,5))
-					else
-						new_character.Move(locate(11,59,5))
+					new_character.updatePig()
+					new_character.create_kg()
+					for(var/obj/effect/landmark/L in landmarks_list)
+						if (L.name == "Soulbreaker")
+							new_character.forceMove(pick(L.loc))
 
 		else if (href_list["vampire"])
 			switch(href_list["vampire"])
