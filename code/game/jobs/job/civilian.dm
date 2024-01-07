@@ -1312,6 +1312,7 @@
 	message_admins("[key_name_admin(src)] has created a great hunt report", 1)
 //Copy of the OG Patriarch in case SOMEBODY dislikes tony being here
 
+/*
 /datum/job/lawyer
 	title = "Patriarch"
 	titlebr = "Patriarca"
@@ -1344,4 +1345,4 @@
 //		H.verbs += /mob/living/carbon/human/proc/great_hunt
 //		H.verbs += /mob/living/carbon/human/proc/duel
 		return 1
-
+*/ 
