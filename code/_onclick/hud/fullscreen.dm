@@ -65,7 +65,7 @@
 			client.screen |= screens[category]
 
 /obj/screen/fullscreen
-	icon_state = "default"
+	icon_state = "allahdogs"
 	screen_loc = "CENTER-7,CENTER-7"
 	plane = 30
 	mouse_opacity = 0
