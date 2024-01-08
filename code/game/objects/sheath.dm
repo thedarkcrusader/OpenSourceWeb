@@ -100,6 +100,11 @@
 	src.icon_state = "sword_sh1"
 	src.item_state = "sheath1"
 
+/obj/item/sheath/scimitar/New()
+	src.contents += new/obj/item/weapon/claymore/scimitar
+	src.icon_state = "sword_sh4"
+	src.item_state = "sheath1"
+
 /obj/item/sheath/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(W.sheathicon && src.contents.len == 0)
 		user.drop_item(sound = 0)

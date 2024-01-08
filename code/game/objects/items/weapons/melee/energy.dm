@@ -28,6 +28,28 @@
 
 /obj/item/weapon/melee/energy/sword
 	color
+	name = "energy scimitar"
+	desc = "May Allah be within you."
+	icon_state = "sword0"
+	force = 3.0
+	throwforce = 5.0
+	throw_speed = 1
+	throw_range = 5
+	w_class = 2.0
+	flags = FPRINT | TABLEPASS | NOSHIELD | NOBLOODY
+	origin_tech = "magnets=3;syndicate=4"
+	attack_verb = list("slices", "cuts", "slashes")
+	swing_sound = 'sound/weapons/energyswing.ogg'
+	hitsound = null
+	parry_chance = 15
+	//sharp = 1
+	//edge = 1
+	var/hacked = 0
+
+// ORIGINAL IF IT WAS EVER NEEDED //
+/*
+/obj/item/weapon/melee/energy/sword
+	color
 	name = "energy sword"
 	desc = "May the force be within you."
 	icon_state = "sword0"
@@ -45,6 +67,8 @@
 	//sharp = 1
 	//edge = 1
 	var/hacked = 0
+*/
+// ORIGINAL IF IT WAS EVER NEEDED //
 
 /obj/item/weapon/melee/energy/sword/pirate
 	name = "energy cutlass"
