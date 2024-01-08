@@ -267,7 +267,7 @@
 
 /obj/item/weapon/claymore/scimitar
 	name = "Scimitar"
-	desc = "An exotic curved sword, not common in Evergreen for it's association with Soulbreakers"
+	desc = "An exotic curved sword, made out of iron or some other unknown alloy. Not common in Evergreen for it's association with Soulbreakers."
 	icon_state = "scimitar"
 	item_state = "sabre"
 	force = 35
@@ -282,6 +282,64 @@
 	parry_chance = 15
 	weight = 2
 	sheathicon = "sword_sh4"
+
+/obj/item/weapon/claymore/scimitar/steel // based around stats from a bastard sword
+	name = "Steel Scimitar"
+	desc = "An exotic curved sword, made out of steel. Not common in Evergreen for it's association with Soulbreakers."
+	icon_state = "steelscimitar"
+	item_state = "sabre"
+	force = 35
+	force_wielded = 55
+	force_unwielded = 35
+	sharp = 1
+	edge = 0
+	throwforce = 5
+	w_class = 4
+	item_worth = 54
+	weapon_speed_delay = 16
+	parry_chance = 15
+	weight = 4
+	sheathicon = "sword_sh4"
+	can_be_smelted_to = /obj/item/weapon/ore/refined/lw/steellw
+
+/obj/item/weapon/claymore/scimitar/silver // borrows stats from a normal silver sword
+	name = "Silver Scimitar"
+	desc = "An exotic curved sword, made out of silver. Not common in Evergreen for it's association with Soulbreakers."
+	icon_state = "silverscimitar"
+	item_state = "sabre"
+	force = 25
+	force_wielded = 35
+	force_unwielded = 25
+	sharp = 1
+	edge = 0
+	throwforce = 5
+	w_class = 4
+	item_worth = 50
+	weapon_speed_delay = 16
+	parry_chance = 20
+	weight = 3
+	silver = TRUE
+	sheathicon = "sword_sh4"
+	can_be_smelted_to = /obj/item/weapon/ore/refined/lw/silverlw
+
+/obj/item/weapon/claymore/scimitar/adamantium // borrows stats from a normal addy sword
+	name = "adamantium sword"
+	desc = "A scimitar made of rare Adamantium, fit for the highest of bashars."
+	icon_state = "adscimitar"
+	item_state = "sabre"
+	force = 90
+	force_wielded = 100
+	force_unwielded = 90
+	sharp = 1
+	edge = 0
+	throwforce = 5
+	w_class = 4
+	item_worth = 786 // Very overpowered number considering how farweb smithing works, but the infinite obol exploit still works, so meh.
+	parry_chance = 35
+	weight = 2
+	sheathicon = "sword_sh4"
+	weapon_speed_delay = 10
+	can_be_smelted_to = /obj/item/weapon/ore/refined/lw/adamantinelw
 
 /obj/item/weapon/claymore/rusty
 	name = "rusty sword"
