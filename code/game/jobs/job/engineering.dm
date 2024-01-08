@@ -35,6 +35,7 @@
 		H.add_perk(/datum/perk/ref/strongback)
 		H.add_perk(/datum/perk/illiterate)
 		H.add_perk(/datum/perk/ancitech)
+		H.religion = "Allah"
 		H.create_kg()
 		return 1
 
@@ -71,5 +72,6 @@
 		H.add_perk(/datum/perk/ref/strongback)
 		H.add_perk(/datum/perk/ancitech)
 		H.terriblethings = TRUE
+		H.religion = "Allah"
 		H.create_kg()
 		return 1

@@ -27,6 +27,7 @@
 		H.equip_to_slot_or_del(new /obj/item/weapon/alicate(H), slot_belt)
 		H.equip_to_slot_or_del(new /obj/item/weapon/carverhammer(H), slot_l_hand)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel/smith(H), slot_back)
+		H.religion = "Allah"
 		H.create_kg()
 		return 1
 
@@ -59,6 +60,7 @@
 		H.equip_to_slot_or_del(new /obj/item/weapon/alicate(H), slot_belt)
 		H.equip_to_slot_or_del(new /obj/item/weapon/carverhammer(H), slot_l_hand)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel/smith(H), slot_back)
+		H.religion = "Allah"
 		H.create_kg()
 		return 1
 
@@ -92,6 +94,7 @@
 		H.equip_to_slot_or_del(new /obj/item/weapon/alicate(H), slot_belt)
 		H.equip_to_slot_or_del(new /obj/item/weapon/carverhammer(H), slot_l_hand)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel/smith(H), slot_back)
+		H.religion = "Allah"
 		H.create_kg()
 		return 1
 
@@ -122,7 +125,7 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/child/shoes(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/yapron(H), slot_wear_suit)
 		H.vice = null
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		H.height = rand(130,150)
 		H.create_kg()
 		return 1
