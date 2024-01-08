@@ -28,6 +28,7 @@ var/fortHand = null
 		H.royalty = 1
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 		H.voicetype = "noble"
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/captain(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/caphat(H), slot_head)
