@@ -1279,6 +1279,8 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/internalaffairs(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/merc_boots(H), slot_shoes)
 		H.combat_music = 'lfwbsounds/bloodlust1.ogg'
+		H.s_tone = 25
+		H.mutations += FAT
 		H.create_kg()
 		//H.verbs += /mob/living/carbon/human/proc/execution
 		H.verbs += /mob/living/carbon/human/proc/great_hunt
@@ -1295,7 +1297,6 @@
 		to_chat(src, "It's already out!")
 		return
 
-	to_chat(src, "They're still alive.")
 	playsound(src.loc, 'sound/effects/gat_new.ogg', 100, 1)
 	src.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/new_rifle/thanatikabal(src), slot_r_hand)
 	src.verbs -= /mob/living/carbon/human/proc/the_gat
