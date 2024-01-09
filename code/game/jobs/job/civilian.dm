@@ -584,8 +584,8 @@
 		if("Spear")
 			src.equip_to_slot_or_del(new /obj/item/weapon/claymore/spear(src), slot_l_hand)
 			src.my_skills.CHANGE_SKILL(SKILL_STAFF, rand(0,3))
-		if("Sword")
-			src.equip_to_slot_or_del(new /obj/item/sheath/claymore(src), slot_l_hand)
+		if("Scimitar")
+			src.equip_to_slot_or_del(new /obj/item/sheath/scimitar(src), slot_l_hand)
 			src.my_skills.CHANGE_SKILL(SKILL_SWORD, rand(0,3))
 		/*if("Combat Knives")
 			src.equip_to_slot_or_del(new /obj/item/weapon/kitchen/utensil/knife/combat(src), slot_l_hand)
@@ -1252,9 +1252,6 @@
 		H.verbs += /mob/living/carbon/human/proc/great_hunt
 		//H.verbs += /mob/living/carbon/human/proc/duel
 		return 1
-
-
-
 
 /mob/living/carbon/human/proc/the_gat()
 	set hidden = 0

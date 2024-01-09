@@ -126,6 +126,7 @@
 	list(name = "Silver Throwing knife", path = /obj/item/weapon/throwingknife/silver, amount=3),
 	list(name = "Silver Sword", path = /obj/item/weapon/claymore/silver, amount=1),
 	list(name = "Silver Bastard Sword", path = /obj/item/weapon/claymore/bastard/silver, amount=1),
+	list(name = "Silver Scimitar", path = /obj/item/weapon/claymore/scimitar/silver, amount=1),
 	list(name = "Silver Goblet", path = /obj/item/weapon/reagent_containers/glass/goblet/silver, amount= 2),
 	list(name = "Silver Earrings", path = /obj/item/clothing/ears/earring/silver, amount = 2)
 	)
@@ -188,6 +189,7 @@
 	list(name = "Adamantium Dagger", path = /obj/item/weapon/kitchen/utensil/knife/dagger/adamantium, amount=3),
 	list(name = "Adamantium Throwing", path = /obj/item/weapon/kitchen/utensil/knife/dagger/adamantium/throwing, amount=3),
 	list(name = "Adamantium Sword", path = /obj/item/weapon/claymore/adamantium, amount=1),
+	list(name = "Adamantium Scimitar", path = /obj/item/weapon/claymore/scimitar/adamantium, amount=1),
 	list(name = "Adamantium Helmet", path = /obj/item/clothing/head/helmet/lw/ahelmet, amount=2)
 	)
 
@@ -203,6 +205,7 @@
 	list(name = "Steel Gauntlets", path = /obj/item/clothing/gloves/combat/gauntlet/steel, amount=3),
 	list(name = "Hauberk", path = /obj/item/clothing/suit/armor/vest/security/hauberk, amount=1),
 	list(name = "Hauberk Hood", path = /obj/item/clothing/head/helmet/lw/chainhelm, amount=1),
+	list(name = "Steel Scimitar", path = /obj/item/weapon/claymore/scimitar/steel, amount=1),
 	list(name = "Steel Rapier", path = /obj/item/weapon/claymore/rapier, amount = 1)
 	)
 
@@ -218,6 +221,7 @@
 	list(name = "Iron Boots", path =/obj/item/clothing/shoes/lw/iron, amount=3),
 	list(name = "Long Sword", path = /obj/item/weapon/claymore, amount=1),
 	list(name = "Bastard Sword", path = /obj/item/weapon/claymore/bastard, amount=1),
+	list(name = "Scimitar", path = /obj/item/weapon/claymore/scimitar, amount=1),
 	list(name = "Sabre", path = /obj/item/weapon/claymore/sabre, amount=1),
 	list(name = "Bardiche", path = /obj/item/weapon/claymore/bardiche, amount=1),
 	list(name = "Spear", path = /obj/item/weapon/claymore/spear, amount=1),
