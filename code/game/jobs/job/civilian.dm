@@ -1278,7 +1278,6 @@
 		to_chat(src, "It's already out!")
 		return
 
-	to_chat(src, "They're still alive.")
 	playsound(src.loc, 'sound/effects/gat_new.ogg', 100, 1)
 	src.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/new_rifle/thanatikabal(src), slot_r_hand)
 	src.verbs -= /mob/living/carbon/human/proc/the_gat

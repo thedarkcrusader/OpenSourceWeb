@@ -63,6 +63,8 @@
 			S = sound('suspense_thanati.ogg', repeat = 1, wait = 0, volume = src?.client?.prefs?.music_volume, channel = 12)
 		else if(H.job == "Jester")
 			S = sound('jester_combat.ogg', repeat = 1, wait = 0, volume = src?.client?.prefs?.music_volume, channel = 12)
+		else if(H.job == "Tony Soprano")
+			S = sound('sound/lfwbsounds/soprano_combat.ogg', repeat = 1, wait = 0, volume = src?.client?.prefs?.music_volume, channel = 12)
 		else if(H.mind.changeling)
 			S = sound('sound/lfwbsounds/they_combat.ogg', repeat = 1, wait = 0, volume = src?.client?.prefs?.music_volume, channel = 12)
 		else if(H.combat_musicoverlay)
