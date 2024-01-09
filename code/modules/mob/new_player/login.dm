@@ -1,10 +1,10 @@
 /var/obj/effect/lobby_image = new/obj/effect/lobby_image()
-var/interquote = pick("I hate this place and I would do anything to get out of here, may the great lord have mercy on us.",
-"All pigs must die.", "There are no angels in Heaven; they're all down here.","Build your wings on the way down.","I'm a coward, stick your knife in me.",
-"Happiness makes death a threat.","Three can keep a secret, if two of them are dead.","Conscious meat. Loving meat. Dreaming meat.",
-"Be happy that it happened, not sad that it ends","This world is a machine! A Machine for Pigs! Fit only for the slaughtering of pigs!",
-"I am begging you. You made me. You are my Creator, my Father. You cannot destroy me!","I have you now, creature. I will destroy you.",
-"It is over. It is time to end this madness.","He who makes a beast of himself removes himself from the pain of being human.")
+var/interquote = pick("How about that prick's face when he saw the gyatt?.",
+"Allahu akbar.", "https://www.youtube.com/watch?v=dQw4w9WgXcQ","How do I stand up?","We need to find water.",
+"See that mountain? You can climb it.","It is a full highest rating I can issue, TEN OUT OF TEN, and it easily earns the BADASS seal of approval.","Would you like to sign my petition?",
+"Divine light severed, you are a flesh automaton animated by neurotrnasmitters.","You gormless tosser!",
+"Look at you! Look at the nasty things that you have become! Look how small you are, how worthless you are! You are wretched, rotten little beasts! I made you!","Hold my beer.",
+"Did you know that you have rights? Constitution says you do, and so do I.","How 'bout that prick's face when he saw the gat?")
 var/brquote = pick("Odeio este lugar e faria qualquer coisa para sair daqui, que o grande senhor tenha misericórdia de nós.",
 "Todos os porcos devem morrer.", "Não há anjos no céu; eles estão todos aqui em baixo.", "Construa suas asas ao descer.", "Sou um covarde, enfie sua faca em mim." ,
 "A morte é apenas uma ameaça por causa da felicidade.", "Três podem guardar um segredo, se dois deles estiverem mortos.", "Carne consciente. Carne que ama. Carne dos sonhos.",
@@ -12,16 +12,16 @@ var/brquote = pick("Odeio este lugar e faria qualquer coisa para sair daqui, que
 "Eu estou te implorando. Você me fez. Você é meu Criador, meu Pai. Você não pode me destruir!", "Eu tenho você agora, criatura. Eu vou destruir você.",
 "Acabou. É hora de acabar com essa loucura.", "Aquele que faz de si mesmo um animal afasta-se da dor de ser humano.")
 /obj/effect/lobby_image
-	name = "Farweb"
-	desc = "Theatre of pain."
+	name = "Allah Combat"
+	desc = "Allah Combat."
 	icon = 'icons/misc/fullscreen.dmi'
 	icon_state = "title"
 	screen_loc = "WEST,SOUTH"
 	plane = 300
 
 /obj/effect/lobby_grain
-	name = "Grain"
-	desc = "Theatre of pain."
+	name = "Allah Combat"
+	desc = "Allah Combat."
 	icon = 'icons/misc/fullscreen.dmi'
 	icon_state = "grain"
 	screen_loc = "WEST,SOUTH"
