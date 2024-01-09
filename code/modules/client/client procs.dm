@@ -39,6 +39,7 @@ var/global/max_players = 90
 		//del(usr)
 		return
 
+/* This removes the ability to crash the server by checking for achievements. Probably.
 	// LISTA DE ACHIEVEMENTS
 	if(href_list["achievements"])
 		var/client/C = locate(href_list["achievements"])
@@ -47,6 +48,8 @@ var/global/max_players = 90
 			C = M.client
 		show_medal(ckeychecking = "[C.ckey]")
 		return
+*/
+
 	//Admin PM
 	if(href_list["priv_msg"])
 		var/client/C = locate(href_list["priv_msg"])

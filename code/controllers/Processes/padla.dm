@@ -31,7 +31,7 @@ var/datum/padla/Padla = null
 		doPadla()
 		to_chat(world, "<br>")
 		to_chat(world, "<span class='ravenheartfortress'>Firethorn Fortress</span>")
-		to_chat(world, "<span class='excomm'>The warlock has made another padla!</span>")
+		to_chat(world, "<span class='excomm'>Someone forgot to pray!</span>")
 		world << sound(pick('padla.ogg','padla2.ogg','padla3.ogg','padla4.ogg'))
 		to_chat(world, "<br>")
 
@@ -58,9 +58,9 @@ var/datum/padla/Padla = null
 /datum/curses/padla/lust/Curse()
 	for(var/mob/living/carbon/human/H in player_list)
 		if(!H.check_perk(/datum/perk/ref/warlock) && H.age > 17)
-			H.add_event("lustpadla", /datum/happiness_event/misc/needsex)
+			H.add_event(/datum/happiness_event/misc/needsex)
 			spawn(5 SECONDS)
-				to_chat(H, "<span class='horriblestate' style='font-size: 150%;'><b><i>Your Lust Intensifies!</i></b></span>")
+				to_chat(H, "<span class='horriblestate' style='font-size: 150%;'><b><i>Allah tests you!</i></b></span>")
 
 /datum/curses/padla/poo
 	name = "poo padla"
