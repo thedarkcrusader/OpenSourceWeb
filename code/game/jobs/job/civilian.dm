@@ -70,6 +70,7 @@
 					H.equip_to_slot_or_del(new /obj/item/clothing/head/ushanka(H), slot_head)
 		H.nutrition = 200
 		H.add_perk(/datum/perk/lessstamina)
+		H.religion = "Allah"
 		H.hidratacao = 150
 		for(var/obj/item/weapon/reagent_containers/food/snacks/organ/O in H.organ_storage)
 			O.bumorgans()
@@ -111,6 +112,7 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/weapon/rag(H), slot_r_store)
 		H.add_perk(/datum/perk/lessstamina)
+		H.religion = "Allah"
 		return 1
 
 /datum/job/chefwife
@@ -144,6 +146,7 @@
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
 			H.equip_to_slot_or_del(new /obj/item/weapon/rag(H), slot_r_store)
 			H.add_perk(/datum/perk/lessstamina)
+			H.religion = "Allah"
 			return 1
 
 		H.voicetype = "noble"
@@ -152,6 +155,7 @@
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/cheap(H), slot_wrist_r)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/weapon/rag(H), slot_r_store)
+		H.religion = "Allah"
 		H.add_perk(/datum/perk/lessstamina)
 		return 1
 
@@ -191,6 +195,7 @@
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/weapon/rag(H), slot_r_store)
+		H.religion = "Allah"
 		H.add_perk(/datum/perk/lessstamina)
 		return 1
 
@@ -225,6 +230,7 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/weapon/rag(H), slot_r_store)
 		H.add_perk(/datum/perk/lessstamina)
+		H.religion = "Allah"
 		return 1
 
 /datum/job/consyte
@@ -384,7 +390,7 @@
 		var/regex/R = regex("(^\\S+) (.*$)")
 		R.Find(H.real_name)
 		var/first_name = R.group[1]
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		H.real_name =  "[first_name]"
 		H.name = H.real_name
 		H.verbs += /mob/living/carbon/human/proc/tellTheTruth
@@ -436,7 +442,7 @@
 		R.Find(H.real_name)
 		var/first_name = R.group[1]
 		H.voicetype = pick("hobo")
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		H.real_name =  "[first_name]"
 		H.name = H.real_name
 		H.hygiene = -400
@@ -519,6 +525,7 @@
 		H.sleeping = 500
 		H.stat = UNCONSCIOUS
 		H.voicetype = pick("noble","strong","sketchy")
+		H.religion = "Allah"
 		H.verbs += /mob/living/carbon/human/proc/pegaclassemerc
 		H.updatePig()
 		return 1
@@ -646,6 +653,7 @@
 			H.my_stats.dx = rand(6,7)
 			H.my_stats.it = rand(9,10)
 			H.my_stats.pr = rand(8,9)
+			H.religion = "Allah"
 			H.verbs += /mob/living/carbon/human/proc/apelidar
 			H.verbs += /mob/living/carbon/human/proc/malabares
 			H.verbs += /mob/living/carbon/human/proc/rememberjoke
@@ -689,6 +697,7 @@
 			H.my_stats.dx = rand(13,16)
 			H.my_stats.it = rand(11,12)
 			H.my_stats.pr = rand(13,15)
+			H.religion = "Allah"
 			H.add_perk(/datum/perk/morestamina)
 			H.add_perk(/datum/perk/singer)
 			H.add_perk(/datum/perk/ref/jumper)
@@ -920,6 +929,7 @@
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/cheap(H), slot_wrist_r)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/minerapron(H), slot_wear_suit)
 		H.add_perk(/datum/perk/illiterate)
+		H.religion = "Allah"
 		H.add_perk(/datum/perk/ref/strongback)
 		H.create_kg()
 		return 1
@@ -932,12 +942,12 @@
 	title = "Bookkeeper"
 	titlebr = "Agente de Vendas"
 	flag = QUARTERMASTER
-	department_head = list("Duke")
+	department_head = list("Tommy Shelby")
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the merchant guild"
+	supervisors = "the Peaky Blinders TV Show"
 	selection_color = "#dddddd"
 	idtype = /obj/item/weapon/card/id/qm
 	access = list(merchant)
@@ -972,7 +982,7 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the merchant and the BARON"
+	supervisors = "the Peaky Blinders TV Show"
 	selection_color = "#dddddd"
 	idtype = /obj/item/weapon/card/id/qm
 	access = list(merchant)
@@ -999,6 +1009,7 @@
 		H.add_perk(/datum/perk/ref/strongback)
 		H.add_perk(/datum/perk/illiterate)
 		H.add_perk(/datum/perk/morestamina)
+		H.religion = "Allah"
 		H.create_kg()
 		return 1
 /*
@@ -1038,12 +1049,12 @@
 	title = "Amuser"
 	titlebr = "Prostituta"
 	flag = HOOKER
-	department_head = list("Trader")
+	department_head = list("Allah")
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 3
-	supervisors = "Your customer and the pusher."
+	supervisors = "Allah"
 	selection_color = "#ae00ff"
 	access = list(amuser)
 	minimal_access = list(amuser)
@@ -1051,17 +1062,19 @@
 	sex_lock = FEMALE
 	thanati_chance = 75
 	money = 3
-	jobdesc = "The lady of the night, a seductress who welcomes men into her soft embrace for coin. The pusher is your pimp, and he&#8217;s expecting a cut of the earnings. Enticing men these nights is not that hard - nights get dreary and lonely after all, but with the recent arrival of the Inquisition, you&#8217;ve noticed your frequent visitors become strangely chaste in your presence."
-	jobdescbr = "Após a chegada da Inquisição, os homens da fortaleza tornaram-se subitamente ... assexuados. Eles têm medo de uma reeducação que agrada a Deus e incapacitante ou apenas se sublimam em fanatismo, intrigas e expectativa de uma matança? De qualquer forma, você deve se esforçar para lembrá-los de simples alegrias corporais."
+	jobdesc = "You were once a lady of the night until the light of Allah redeemed you. You wear the hijab now."
+	jobdescbr = "You were once a lady of the night until the light of Allah redeemed you. You wear the hijab now."
 	equip(var/mob/living/carbon/human/H)
 		if(!H)
 			return 0
 		..()
-		H.equip_to_slot_or_del(new /obj/item/clothing/suit/hooker(H), slot_wear_suit)
-		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/fetish(H), slot_shoes)
+		H.equip_to_slot_or_del(new /obj/item/clothing/suit/maiddress(H), slot_wear_suit)
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/sandal(H), slot_shoes)
 		//H.equip_to_slot_or_del(new /obj/item/clothing/gloves/fingerless(H), slot_gloves)
+		H.equip_to_slot_or_del(new /obj/item/clothing/head/plebhood/leper(H), slot_head)
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/cheap(H), slot_wrist_r)
 		H.add_perk(/datum/perk/illiterate)
+		H.religion = "Allah"
 		H.add_perk(/datum/perk/morestamina)
 		return 1
 
@@ -1097,7 +1110,7 @@
 		H.add_perk(/datum/perk/illiterate)
 		H.vice = null
 		H.height = rand(130,150)
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		return 1
 
 /datum/job/smuggler
@@ -1135,6 +1148,7 @@
 		H.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/club/knuckleduster(H), slot_l_store)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/briefcase(H), slot_r_hand)
 		H.terriblethings = TRUE
+		H.religion = "Allah"
 
 		spawn while(H.mind)
 			if(!isnum(H.mind.time_to_pay))
@@ -1211,6 +1225,7 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/misero(H), slot_head)
 		H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(H), slot_glasses)
 		H.terriblethings = TRUE
+		H.religion = "Allah"
 		H.add_perk(/datum/perk/illiterate)
 		H.create_kg()
 		return 1

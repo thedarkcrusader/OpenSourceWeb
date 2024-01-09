@@ -361,8 +361,9 @@
 	happiness = -5
 
 /datum/happiness_event/misc/needsex
-	description = "<span class='badmood'>• I NEED SOMEONE TO FUCK!</span>\n"
-	happiness = -30
+	description = "<span class='badmood'>• ARGH, ALLAH IS TESTING ME!</span>\n"
+	happiness = -666
+	timeout = 666
 
 
 //VICE
@@ -394,7 +395,7 @@
 
 
 /datum/happiness_event/vice/necro
-	description = "<span class='badmood'>• I need someone more rotten than me.</span>\n"
+	description = "<span class='badmood'>• I need to be really fucking weird.</span>\n"
 	happiness = -15
 
 /datum/happiness_event/vice/pyromaniac
@@ -402,7 +403,7 @@
 	happiness = -15
 
 /datum/happiness_event/vice/sexo
-	description = "<span class='badmood'>• I need someone to fuck.</span>\n"
+	description = "<span class='badmood'>• I need to disgrace Allah by having sex.</span>\n"
 	happiness = -15
 
 /datum/happiness_event/vice/alco
