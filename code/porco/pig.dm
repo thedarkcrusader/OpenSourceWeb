@@ -317,7 +317,7 @@
 			verbs += list(list("tellTheTruth", "Tell the Truth"))
 
 		if(H.job == "Tony Soprano" || H.old_job == "Tony Soprano")
-			verbs += list(list("the_gat", "Get Out Da Gat (HAVE AN EMPTY RIGHT HAND)"))
+			verbs += list(list("the_gat", "Get Out Da Gat (HAVE AN EMPTY RIGHT HAND)"), list("Whack", "Whack Order"))
 
 
 		if(H.job == "Urchin" || H.old_job == "Urchin")
