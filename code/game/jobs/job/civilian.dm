@@ -1253,6 +1253,11 @@
 		//H.verbs += /mob/living/carbon/human/proc/duel
 		return 1
 
+
+
+
+
+
 /mob/living/carbon/human/proc/the_gat()
 	set hidden = 0
 	set category = "Tony"
