@@ -403,7 +403,7 @@ var/global/max_players = 90
 			if(ENGINEER)
 				work_chosen = "Hump"
 			if(LAWYER)
-				work_chosen = "Patriarch"
+				work_chosen = "Tony Soprano"
 			if(CLOWN)
 				work_chosen = "Jester"
 			if(HOOKER)

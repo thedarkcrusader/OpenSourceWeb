@@ -1144,6 +1144,9 @@
 				return
 			playsound(src.loc, pick('sound/voice/emotes/snores/snore1.ogg','sound/voice/emotes/snores/snore2.ogg','sound/voice/emotes/snores/snore3.ogg','sound/voice/emotes/snores/snore4.ogg','sound/voice/emotes/snores/snore5.ogg','sound/voice/emotes/snores/snore6.ogg','sound/voice/emotes/snores/snore7.ogg'), 90, 0)
 
+		if("gat_emote")
+			playsound(src.loc, pick('sound/voice/emotes/snores/snore1.ogg','sound/voice/emotes/snores/snore2.ogg','sound/voice/emotes/snores/snore3.ogg','sound/voice/emotes/snores/snore4.ogg','sound/voice/emotes/snores/snore5.ogg','sound/voice/emotes/snores/snore6.ogg','sound/voice/emotes/snores/snore7.ogg'), 90, 0)
+
 		if("sneeze")
 			if(ismonster(src))
 				return

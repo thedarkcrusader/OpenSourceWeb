@@ -1217,7 +1217,7 @@
 
 //var/global/lawyer = 0//Checks for another lawyer //This changed clothes on 2nd lawyer, both IA get the same dreds.
 
-/*
+
 /datum/job/lawyer
 	title = "Tony Soprano"
 	titlebr = "Patriarca"
@@ -1232,7 +1232,7 @@
 	access = list(keep,courtroom)
 	minimal_access = list(keep,courtroom)
 	sex_lock = MALE
-	jobdesc = "The most respected man in the fortress outside of the Baron himself. He is one of the eldest residents, with a large family to show for it. He handles domestic disputes and ensures that the law is adhered. Residents often find themselves coming to him for advice."
+	jobdesc = "Recently chosen as the new judge of the fortress after the departure of the old patriarch. You lead the people, resolve disputes and engage in legitimate business. And if things go wrong, just take a look at their faces when you pull out THE GAT."
 	latejoin_locked = FALSE
 	thanati_chance = 75
 	equip(var/mob/living/carbon/human/H)
@@ -1242,30 +1242,35 @@
 		H.voicetype = "noble"
 		H.verbs += /mob/living/carbon/human/proc/the_gat
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
+		H.real_name = "Tony Soprano"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/internalaffairs(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/merc_boots(H), slot_shoes)
-		H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/pistol/jester(H), slot_r_hand)
-		H.combat_music = 'sound/lfwbsounds/bloodlust1.ogg'
+		H.combat_music = 'lfwbsounds/bloodlust1.ogg'
 		H.create_kg()
-//		H.verbs += /mob/living/carbon/human/proc/execution
-//		H.verbs += /mob/living/carbon/human/proc/great_hunt
-//		H.verbs += /mob/living/carbon/human/proc/duel
+		//H.verbs += /mob/living/carbon/human/proc/execution
+		H.verbs += /mob/living/carbon/human/proc/great_hunt
+		//H.verbs += /mob/living/carbon/human/proc/duel
 		return 1
 
-*/
 /mob/living/carbon/human/proc/the_gat()
 	set hidden = 0
 	set category = "Tony"
 	set name = "the_gat"
 	set desc="Get Out Da Gat"
+	var/gat_is_out = 0
+	if(gat_is_out == 1)
+		to_chat(src, "It's already out!")
+		return
 
 	to_chat(src, "They're still alive.")
+	playsound(src.loc, 'sound/effects/gat_new.ogg', 100, 1)
+	src.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/new_rifle/thanatikabal(src), slot_r_hand)
+	src.verbs -= /mob/living/carbon/human/proc/the_gat
 
 
 /mob/living/carbon/human/proc/execution()
-	set hidden = 0
-	set category = "Law"
+	set category = "Tony"
 	set name = "Execucao"
 	set desc="Executa alguém."
 	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
@@ -1274,13 +1279,13 @@
 	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
 		return
 	world << sound('sound/AI/judgement.ogg')
+	to_chat(world, "<b>[input]</b> will be executed in court.", "Tony Soprano [src] & South's Law")
 	command_alert("<b>[input]</b> will be executed in court.", "Tony Soprano [src] & South's Law");
 	log_admin("[key_name(src)] has declared execution on someone: [input]")
 	message_admins("[key_name_admin(src)] has created a execution report", 1)
 
 /mob/living/carbon/human/proc/duel()
-	set hidden = 0
-	set category = "Law"
+	set category = "Tony"
 	set name = "Duelo"
 	set desc="Bota pessoas para duelar."
 	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
@@ -1292,26 +1297,27 @@
 	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
 		return
 	world << sound('sound/AI/judgement.ogg')
-	command_alert("<b>[input]</b> e <b>[input2]</b> will duel to their death.", "Tony Soprano [src] & South's Law")
+	to_chat(world, "<b>[input]</b> e <b>[input2]</b> will duel to their death.", "Tony Soprano [src] & South's Law")
 	log_admin("[key_name(src)] has declared execution on someone: [input]")
 	message_admins("[key_name_admin(src)] has created a execution report", 1)
 
 /mob/living/carbon/human/proc/great_hunt()
-	set hidden = 0
-	set category = "Law"
-	set name = "Cacada"
+	set category = "Tony"
+	set name = "Whack"
 	set desc="Caça alguém."
-	var/input = sanitize_uni(input(usr, "Nome do julgado.", "What?", "") as message|null)
+	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
+		to_chat(src, "You Need To Be On Your Throne!")
+		return
+	var/input = sanitize_uni(input(usr, "Who Do You Want To Whack?", "What?", "") as message|null)
+	var/input2 = sanitize_uni(input(usr, "How Much Will You Pay?", "What?", "") as message|null)
 	if(!input)
 		return
-	if(!src.anchored && !istype(src.anchored, /obj/structure/stool/bed/chair/comfy/judge))
-		return
 	world << sound('sound/AI/judgement.ogg')
-	command_alert("A great hunt has been declared on <b>[input]</b>", "Tony Soprano [src] & South's Law")
+	to_chat(world, "<span class='ravenheartfortress'>Tony Soprano</span>")
+	to_chat(world, "<span class='decree'>Tony Soprano wants <b>[input]</b> whacked, he will pay <b>[input2]</b> Obols.</span>")
 	log_admin("[key_name(src)] has declared a great hunt on someone: [input]")
 	message_admins("[key_name_admin(src)] has created a great hunt report", 1)
 //Copy of the OG Patriarch in case SOMEBODY dislikes tony being here
-
 /*
 /datum/job/lawyer
 	title = "Patriarch"
