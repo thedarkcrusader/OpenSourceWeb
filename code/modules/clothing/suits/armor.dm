@@ -476,6 +476,22 @@
 	armor_type = ARMOR_METAL
 	name_tag = FALSE
 
+/obj/item/clothing/suit/armor/vest/security/soulbreaker/garrison
+	name = "soulbreaker armor w/ tabard"
+	desc = "Armor worn by the guards of Allah. Allahu akbar."
+	icon_state = "bruhgarrison2"
+	item_state = "armor"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|GROIN|LEGS|HANDS|THROAT
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|GROIN|LEGS
+	min_cold_protection_temperature = ARMOR_MIN_COLD_PROTECTION_TEMPERATURE
+	heat_protection = UPPER_TORSO|LOWER_TORSO|ARMS|GROIN|LEGS
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
+	armor = list(melee = 60, bullet = 80, laser = 20, energy = 10, bomb = 50, bio = 0, rad = 0)
+	item_worth = 100
+	weight = 60
+	armor_type = ARMOR_METAL
+	name_tag = FALSE
+
 /obj/item/clothing/suit/armor/vest/security/lord
 	name = "lord armor"
 	desc = "A lordly coat of armor"

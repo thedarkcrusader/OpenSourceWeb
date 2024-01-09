@@ -65,8 +65,8 @@ var/round_nuke_loc = "None"
 
 	//MIGRANT WAVE
 	var/migwave_timeleft = 30
-	var/max_migrant_req = 5
-	var/migrant_req = 5
+	var/max_migrant_req = 1
+	var/migrant_req = 1
 	var/migwave_going = FALSE
 	var/list/migrants_inwave = list()
 	var/forcemod = null

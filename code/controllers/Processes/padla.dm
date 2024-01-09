@@ -58,7 +58,7 @@ var/datum/padla/Padla = null
 /datum/curses/padla/lust/Curse()
 	for(var/mob/living/carbon/human/H in player_list)
 		if(!H.check_perk(/datum/perk/ref/warlock) && H.age > 17)
-			H.add_event(/datum/happiness_event/misc/needsex)
+			H.add_event("lustpadla", /datum/happiness_event/misc/needsex)
 			spawn(5 SECONDS)
 				to_chat(H, "<span class='horriblestate' style='font-size: 150%;'><b><i>Allah tests you!</i></b></span>")
 

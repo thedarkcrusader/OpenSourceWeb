@@ -507,7 +507,7 @@
 	selection_color = "#ffeeee"
 	idtype = /obj/item/weapon/card/id
 	access = list()
-	jobdesc = "A sellsword of Firethorn, you joined the local mercenary&#8217;s guild for a chance of landing a paying job. You have yet to find one."
+	jobdesc = "You are the protagonist. Remember to act like it, people love that."
 	minimal_access = list()
 	latejoin_locked = FALSE
 	thanati_chance = 12
@@ -541,6 +541,7 @@
 		return
 	if(reddawn_merc.Find(src.ckey))
 		mercList.Add("Ex-Red Dawn Mercenary")
+		mercList.Add("Child Soldier")
 	if(seaspotter_merc.Find(src.ckey))
 		mercList.Add("Ex-Seaspotter Mercenary")
 	sleep(10)
@@ -575,9 +576,21 @@
 			src.my_skills.ADD_SKILL(SKILL_SWIM, 4)
 			src.my_skills.ADD_SKILL(SKILL_RANGE, 1)
 
+		if("Child Soldier")
+			src.job = "Mercenary"
+			src.equip_to_slot_or_del(new /obj/item/clothing/head/armingcap(src), slot_head)
+			src.equip_to_slot_or_del(new /obj/item/clothing/suit/child_coldsuit(src), slot_wear_suit)
+			src.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet(src), slot_wrist_l)
+			src.equip_to_slot_or_del(new /obj/item/clothing/under/urchin(src), slot_w_uniform)
+			src.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/child/miner(src), slot_shoes)
+
+			src.my_skills.ADD_SKILL(SKILL_STEAL, 6)
+			src.terriblethings = FALSE
+			src.my_skills.ADD_SKILL(SKILL_RANGE, 5)
+
 	if(src.ckey in black_cloak)
 		src.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/merccloak(src), slot_back)
-	var/list/mercWeapons = list("Axe","Spear","Sword","Club")
+	var/list/mercWeapons = list("Axe","Spear","Sword","Club","Guitar")
 	sleep(10)
 	if(migclass)
 		return
@@ -601,6 +614,10 @@
 		if("Club")
 			src.equip_to_slot_or_del(new /obj/item/weapon/melee/classic_baton/mace(src), slot_l_hand)
 			src.my_skills.CHANGE_SKILL(SKILL_SWING, rand(0,3))
+		if("Guitar")
+			src.equip_to_slot_or_del(new /obj/item/weapon/musical_instrument/baliset/guitar(src), slot_l_hand)
+			src.my_skills.ADD_SKILL(SKILL_MUSIC, rand(8,16))
+			src.my_stats.it -= 2
 	src.can_stand = 1
 	src.sleeping = 0
 	src.stat = CONSCIOUS
