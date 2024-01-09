@@ -4,7 +4,7 @@ var/interquote = pick("How about that prick's face when he saw the gyatt?.",
 "See that mountain? You can climb it.","It is a full highest rating I can issue, TEN OUT OF TEN, and it easily earns the BADASS seal of approval.","Would you like to sign my petition?",
 "Divine light severed, you are a flesh automaton animated by neurotrnasmitters.","You gormless tosser!",
 "Look at you! Look at the nasty things that you have become! Look how small you are, how worthless you are! You are wretched, rotten little beasts! I made you!","Hold my beer.",
-"Did you know that you have rights? Constitution says you do, and so do I.","Insert quote here.")
+"Did you know that you have rights? Constitution says you do, and so do I.","How 'bout that prick's face when he saw the gat?")
 var/brquote = pick("Odeio este lugar e faria qualquer coisa para sair daqui, que o grande senhor tenha misericórdia de nós.",
 "Todos os porcos devem morrer.", "Não há anjos no céu; eles estão todos aqui em baixo.", "Construa suas asas ao descer.", "Sou um covarde, enfie sua faca em mim." ,
 "A morte é apenas uma ameaça por causa da felicidade.", "Três podem guardar um segredo, se dois deles estiverem mortos.", "Carne consciente. Carne que ama. Carne dos sonhos.",
