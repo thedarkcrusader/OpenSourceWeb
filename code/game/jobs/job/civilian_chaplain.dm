@@ -4,20 +4,20 @@ var/global/Inquisitor_Type = "Null"
 
 /datum/job/chaplain
 	title = "Bishop"
-	titlebr = "Bispo"
+	titlebr = "Bishop"
 	flag = CHAPLAIN
-	department_head = list("The God")
+	department_head = list("Allah")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the god king"
+	supervisors = "Allah"
 	selection_color = "#dddddd"
 	idtype = /obj/item/weapon/card/id/chaplain
 	access = list(church, access_morgue, access_chapel_office, access_maint_tunnels)
 	minimal_access = list(church, access_morgue, access_chapel_office)
 	sex_lock = MALE
-	jobdesc = "Head of the local church in Firethorn. He blesses those who give their tithes and strive to seperate themselves from Him. The Shepard of the sheep, he guides people who have lost their way back to the right path, either through confession or epitemia. Excommunication from the Church is nothing to be taken lightly and is reserved only for acts of serious, unrepentant heresy."
+	jobdesc = "Head of the local mosque in Firethorn. He blesses those who give their tithes and strive to seperate themselves from Him. The Shepard of the sheep, he guides people who have lost their way back to the right path, either through confession or epitemia. Excommunication from the Mosque is nothing to be taken lightly and is reserved only for acts of serious, unrepentant heresy."
 	equip(var/mob/living/carbon/human/H)
 		if(!H)
 			return 0
@@ -25,7 +25,7 @@ var/global/Inquisitor_Type = "Null"
 		var/obj/item/weapon/storage/bible/B = new /obj/item/weapon/storage/bible(H) //BS12 EDIT
 		H.equip_to_slot_or_del(B, slot_l_hand)
 		H.voicetype = "noble"
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/bishop(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
@@ -415,7 +415,7 @@ var/rewarded = 0
 	title = "Inquisitor"
 	titlebr = "Inquisidor"
 	flag = INQUISITOR
-	department_head = list("Church")
+	department_head = list("Allah")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
@@ -436,7 +436,7 @@ var/rewarded = 0
 		..()
 		if(Inquisitor_Type == "Month's Inquisitor")
 			H.voicetype = "sketchy"
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/general_inquisitor/alt1(H), slot_wear_suit)
@@ -453,7 +453,7 @@ var/rewarded = 0
 			H.create_kg()
 		if(Inquisitor_Type == "Holy War Veterans")
 			H.voicetype = "sketchy"
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/general_inquisitor/alt1(H), slot_wear_suit)
@@ -475,7 +475,7 @@ var/rewarded = 0
 			H.my_skills.ADD_SKILL(SKILL_CLIMB, rand(1,2))
 		if(Inquisitor_Type == "Master")
 			H.voicetype = "sketchy"
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/general_inquisitor/alt2(H), slot_wear_suit)
@@ -502,7 +502,7 @@ var/rewarded = 0
 			H.create_kg()
 		if(Inquisitor_Type == "Fanatic")
 			H.voicetype = "sketchy"
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/general_inquisitor(H), slot_wear_suit)
@@ -530,7 +530,7 @@ var/rewarded = 0
 				Inquisitor_Points += 15
 
 			H.voicetype = "sketchy"
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/general_inquisitor(H), slot_wear_suit)
@@ -705,7 +705,7 @@ var/rewarded = 0
 		..()
 		if(Inquisitor_Type == "Old Guard")
 			H.voicetype = pick("sketchy","strong")
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 			//H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/practicus(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/boots(H), slot_shoes)
@@ -716,7 +716,7 @@ var/rewarded = 0
 			H.create_kg()
 		if(Inquisitor_Type == "Holy War Veterans")
 			H.voicetype = pick("sketchy","strong")
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 			//H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/practicus(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/eng(H), slot_wrist_r)
@@ -737,7 +737,7 @@ var/rewarded = 0
 			H.create_kg()
 		else
 			H.voicetype = pick("sketchy","strong")
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 			//H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/practicus(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/boots(H), slot_shoes)
@@ -760,7 +760,7 @@ var/rewarded = 0
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	jobdesc = "As a sister of the church, you are a symbol of purity. You help the sick and downtrodden, and are trusted by all residents within the fortress. You use this trust to extract information from those you care for, and report sinners and evildoers to the Holy Father. Trust and care are your information."
+	jobdesc = "As a sister of the mosque, you are a symbol of purity. You help the sick and downtrodden, and are trusted by all residents within the fortress. You use this trust to extract information from those you care for, and report sinners and evildoers to the Holy Father. Trust and care are your information."
 	jobdescbr = "Cuide dos feridos, alimente os famintos e não se esqueça de punir os maus costumes."
 	supervisors = "the bishop and the inquisitor"
 	selection_color = "#dddddd"
@@ -773,7 +773,7 @@ var/rewarded = 0
 		if(!H)
 			return 0
 		..()
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/chaplain(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/nundress(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/nun_hood(H), slot_head)

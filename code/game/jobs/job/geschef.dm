@@ -30,5 +30,5 @@
 		H.add_perk(/datum/perk/illiterate)
 		H.height = rand(155,165)
 		H.Altista()
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		return 1

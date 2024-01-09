@@ -4,12 +4,12 @@ var/fortHand = null
 	title = "Baron"
 	titlebr = "Barão"
 	flag = CAPTAIN
-	department_head = list("Centcom")
+	department_head = list("Allah")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The God King."
+	supervisors = "Allah"
 	selection_color = "#ccccff"
 	idtype = /obj/item/weapon/card/id/lord
 	access = list(meistery,smith,treasury,esculap,sanctuary,innkeep,merchant,garrison,keep,baronquarter,hump,courtroom,soilery,lifeweb,geschef, marduk, hand_access)
@@ -28,6 +28,7 @@ var/fortHand = null
 		H.royalty = 1
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 		H.voicetype = "noble"
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/captain(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/caphat(H), slot_head)
@@ -95,6 +96,7 @@ var/fortHand = null
 		H.royalty = 1
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 		H.voicetype = "noble"
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/captain(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/hand(H), slot_wear_suit)
@@ -143,12 +145,14 @@ var/fortHand = null
 			H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/child/miner(H), slot_shoes)
 			H.voicetype = "noble"
+			H.religion = "Allah"
 			H.add_event("nobleblood", /datum/happiness_event/noble_blood)
 			H.height = rand(130,150)
 			return 1
 		H.royalty = 1
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 		H.voicetype = "noble"
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/captain(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
 		H.add_event("nobleblood", /datum/happiness_event/noble_blood)
@@ -188,6 +192,7 @@ var/fortHand = null
 			H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/child/shoes(H), slot_shoes)
 			H.voicetype = "noble"
+			H.religion = "Allah"
 			H.add_event("nobleblood", /datum/happiness_event/noble_blood)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/succdress/child(H), slot_wear_suit)
 			H.height = rand(130,150)
@@ -196,6 +201,7 @@ var/fortHand = null
 		H.royalty = 1
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 		H.voicetype = "noble"
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/common(H), slot_w_uniform)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/succdress(H), slot_wear_suit)
@@ -236,6 +242,7 @@ var/fortHand = null
 			H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/captain(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
+			H.religion = "Allah"
 			H.add_event("nobleblood", /datum/happiness_event/noble_blood)
 			H.create_kg()
 			return 1
@@ -244,6 +251,7 @@ var/fortHand = null
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/baronessdress(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/sunhat(H), slot_head)
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/gloves/evening(H), slot_gloves)
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/minisatchelchurch2(H), slot_back)
 		if(H.back)
@@ -294,6 +302,7 @@ var/fortHand = null
 		H.add_event("nobleblood", /datum/happiness_event/noble_blood)
 		H.add_perk(/datum/perk/ref/strongback)
 		H.add_perk(/datum/perk/morestamina)
+		H.religion = "Allah"
 		H.terriblethings = TRUE
 		H.add_perk(/datum/perk/heroiceffort)
 		var/swordtype = pick("scimitar","sabre","bardiche","spear")
@@ -344,6 +353,7 @@ var/fortHand = null
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/maiddress(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/boots(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/weapon/rag(H), slot_r_store)
+		H.religion = "Allah"
 		H.add_perk(/datum/perk/lessstamina)
 		H.create_kg()
 		return 1
@@ -379,6 +389,7 @@ var/fortHand = null
 		H.equip_to_slot_or_del(new /obj/item/sheath/sabre(H), slot_belt)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guest(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/boots(H), slot_shoes)
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/coinbag/guest(H), slot_amulet)
 		H.create_kg()
 		return 1
@@ -437,7 +448,7 @@ var/fortHand = null
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/child/miner(H), slot_shoes)
 		H.equip_to_slot_or_del(new /obj/item/weapon/rag(H), slot_r_store)
 		H.vice = null
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		H.create_kg()
 		return 1
 
@@ -469,6 +480,7 @@ var/fortHand = null
 		..()
 		H.royalty = 1
 		H.voicetype = "noble"
+		H.religion = "Allah"
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/ushanka/soviet(H), slot_head)
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/captain(H), slot_wrist_r)
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/common(H), slot_w_uniform)
@@ -514,6 +526,7 @@ var/fortHand = null
 			H.job = "Meister Disciple"
 			H.old_job = "Meister Disciple"
 			H.add_perk(/datum/perk/ancitech)
+			H.religion = "Allah"
 			H.create_kg()
 			return 1
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/common(H), slot_w_uniform)
