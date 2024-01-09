@@ -451,6 +451,10 @@
 				//code aqui
 				warning("Special de: [ckey ? "CKEY: [ckey]" : "SEM CKEY"] carregou.")
 				src.religion = "Allah"
+				if(src.job == "Baron")
+					src.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/soulbreaker(src), slot_l_hand)
+				else
+					src.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/soulbreaker(src), slot_head)
 			if("hygiene")
 				warning("Special de: [ckey ? "CKEY: [ckey]" : "SEM CKEY"] carregou.")
 				src.hygiene = -400

@@ -37,6 +37,7 @@ datum/job/ordinator
 		H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/leet/sparq(H), slot_belt)
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sechelm/veteran(H), slot_r_hand)
 		H.equip_to_slot_or_del(new /obj/item/sheath/scimitar(H), slot_l_hand)
+		H.religion = "Allah"
 		H.add_perk(/datum/perk/ref/strongback)
 		H.terriblethings = TRUE
 		H.add_perk(/datum/perk/heroiceffort)
@@ -75,6 +76,7 @@ datum/job/ordinator
 		H.add_perk(/datum/perk/morestamina)
 		H.equip_to_slot_or_del(new /obj/item/daggerssheath/iron(H), slot_wrist_l)
 		H.terriblethings = TRUE
+		H.religion = "Allah"
 		if(pigpluslist?.Find(ckey(H?.client?.key)))
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
@@ -160,6 +162,7 @@ datum/job/ordinator
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/security(H), slot_wrist_r)
 		H.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(H), slot_glasses)
 		H.terriblethings = TRUE
+		H.religion = "Allah"
 		H.add_perk(/datum/perk/morestamina)
 		H.create_kg()
 		//H << sound('sound/music/sherold.ogg', repeat = 0, wait = 0, volume = 12, channel = 3)
@@ -228,7 +231,7 @@ datum/job/ordinator
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/squire(H), slot_wear_suit)
 			H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/cheap/sec(H), slot_wrist_r)
 			H.vice = null
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 			H.add_perk(/datum/perk/heroiceffort)
 			H.add_perk(/datum/perk/morestamina)
 			H.height = rand(130,150)
@@ -278,7 +281,7 @@ var/global/Gatekeeper_Type = "Null"
 			H.my_stats.pr = 12
 			H.terriblethings = TRUE
 			H.add_perk(/datum/perk/morestamina)
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 			H.create_kg()
 			return 1
 		else if(Gatekeeper_Type == "Chariot")
@@ -303,7 +306,7 @@ var/global/Gatekeeper_Type = "Null"
 			H.terriblethings = TRUE
 			H.add_perk(/datum/perk/morestamina)
 			H.add_perk(/datum/perk/ref/strongback)
-			H.religion = "Gray Church"
+			H.religion = "Allah"
 			H.create_kg()
 			return 1
 
@@ -333,7 +336,7 @@ var/global/Gatekeeper_Type = "Null"
 		H.job = "Ordinator"
 		H.terriblethings = TRUE
 		H.voicetype = "strong"
-		H.religion = "Gray Church"
+		H.religion = "Allah"
 		var/syndicate_commando_rank = pick("Pvt.", "Pfc.", "LCpl.", "Cpl.", "Sgt.")
 		H.real_name = "[syndicate_commando_rank] [H.real_name]"
 		H.equip_to_slot_or_del(new /obj/item/clothing/under/ordinator(H), slot_w_uniform)

@@ -27,6 +27,7 @@
 		H.add_event("nobleblood", /datum/happiness_event/noble_blood)
 		H.add_perk(/datum/perk/chemical)
 		H.terriblethings = TRUE
+		H.religion = "Allah"
 		H.create_kg()
 		return 1
 
@@ -59,6 +60,7 @@
 		H.h_style = "Shaved"
 		H.add_perk(/datum/perk/chemical)
 		H.terriblethings = TRUE
+		H.religion = "Allah"
 		H.create_kg()
 		return 1
 
@@ -90,6 +92,7 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/chemsis(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/brown(H), slot_shoes)
 		H.add_perk(/datum/perk/chemical)
+		H.religion = "Allah"
 		H.terriblethings = TRUE
 		H.create_kg()
 		return 1
