@@ -407,12 +407,9 @@ var/aspects_max = 3
 		dat += "Game Duration: [round(hours)]h [round(mins)]m<br>"
 		dat += "Choose your fate:<br>"
 		var/list/allowedFatesList = list("Migrant","Bum","Servant","Nun","Maid")
-		if(mercenary_donor.Find(src.client.ckey))
-			allowedFatesList.Add("Mercenary")
-		if(urchin_donor.Find(src.client.ckey))
-			allowedFatesList.Add("Urchin")
-		if(tribunal_vet.Find(src.client.ckey))
-			allowedFatesList.Add("Tribunal Veteran")
+		allowedFatesList.Add("Mercenary")
+		allowedFatesList.Add("Urchin")
+		allowedFatesList.Add("Tribunal Veteran")
 		for(var/datum/job/job in job_master.occupations)
 			if(job && IsJobAvailable(job.title))
 				if(!trapapoc.Find(ckey(src.client.key)) || job.no_trapoc)

@@ -41,10 +41,10 @@ var/brquote = pick("Odeio este lugar e faria qualquer coisa para sair daqui, que
 	..()
 	if(ticker?.current_state != GAME_STATE_PLAYING)
 		for(var/mob/new_player/N in mob_list)
-			to_chat(N, "⠀<span class='passivebold'>[capitalize(usr.key)] joined the game.</span>")
-	var/list/locinfo = client?.get_loc_info()
+			to_chat(N, "⠀<span class='passivebold'>[capitalize(usr.key)] is now at the local Mosque.</span>")
+//	var/list/locinfo = client?.get_loc_info()
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
-	winset(src, null, "mainwindow.title='Farweb'")//Making it so window is named what it's named.
+	winset(src, null, "mainwindow.title='Allah Combat'")//Making it so window is named what it's named.
 	if(join_motd)
 		if(guardianlist.Find(ckey(src.client.key)))
 			to_chat(src, "Welcome, <span class='graytextbold'>[capitalize(usr.ckey)]</span>! Your reliability level: <span class='guardianlobby'>Guardian</span>")
@@ -59,10 +59,10 @@ var/brquote = pick("Odeio este lugar e faria qualquer coisa para sair daqui, que
 		else
 			to_chat(src, "Welcome, <span class='graytextbold'>[capitalize(usr.ckey)]</span>! Your reliability level: <span class='graytextbold'>Pig</span>")
 		to_chat(src, "Press <a href='?src=\ref[src];action=f12'>F12</a> find your death!")
-		to_chat(src, "Map of the week:</span> <span class='bname'><i>[currentmaprotation]</i></span>")
-		to_chat(src, "Country: <span class='bname'>[capitalize(locinfo["country"])]</span>")
-		to_chat(src, "<span class='lobby'>Farweb</span>   <span class='lobbyy'>Story #[story_id]</span>")
-		to_chat(src, "<span class='bname'><b>Interzone:</span></b> <i>\"[interquote]\"</i>")
+		to_chat(src, "Map of the week:</span> <span class='bname'><i>fucking golden river</i></span>")
+		to_chat(src, "Country: <span class='bname'>Middle East</span>")
+		to_chat(src, "<span class='lobby'>Allah Combat</span>   <span class='lobbyy'>Story #[story_id]</span>")
+		to_chat(src, "<span class='bname'><b>Allah:</span></b> <i>\"[interquote]\"</i>")
 	if(ticker && ticker.current_state == GAME_STATE_PLAYING && master_mode == "inspector")
 		to_chat(src, "\n<div class='firstdivmood'><div class='moodbox'><span class='graytext'>You may join as the Inspector or his bodyguard.</span>\n<span class='feedback'><a href='?src=\ref[src];acao=joininspectree'>1. I want to.</a></span>\n<span class='feedback'><a href='?src=\ref[src];acao=nao'>2. I'll pass.</a></span></div></div>")
 

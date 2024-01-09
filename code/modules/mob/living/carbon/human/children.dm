@@ -89,3 +89,25 @@
 	weight = 28
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|GROIN|LEGS
 	armor_type = ARMOR_METAL
+
+/obj/item/clothing/suit/armor/vest/ycensor/garrisoncaptain
+	name = "child soulbreaker armor w/ tabard"
+	desc = "No, there isn't a version without it. Go pray to Allah now."
+	icon_state = "bruhsquire"
+	item_color = "bruhsquire"
+	species_restricted = list("Child")
+	armor = list(melee = 70, bullet = 60, laser = 50, energy = 10, bomb = 25, bio = 0, rad = 0)
+	weight = 28
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|GROIN|LEGS
+	armor_type = ARMOR_METAL
+
+/obj/item/clothing/suit/armor/vest/ycensor/garrison
+	name = "little eunuch armor"
+	desc = "It looks like a jumpsuit, but it is actually armor. Allahu akbar!"
+	icon_state = "bruhsquire2"
+	item_color = "bruhsquire2"
+	species_restricted = list("Child")
+	armor = list(melee = 50, bullet = 60, laser = 50, energy = 10, bomb = 25, bio = 0, rad = 0)
+	weight = 12
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|GROIN|LEGS
+	armor_type = ARMOR_METAL
