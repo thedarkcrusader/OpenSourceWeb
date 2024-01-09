@@ -1262,6 +1262,8 @@
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/internalaffairs(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/merc_boots(H), slot_shoes)
 		H.combat_music = 'lfwbsounds/bloodlust1.ogg'
+		H.s_tone = 25
+		H.mutations += FAT
 		H.create_kg()
 		//H.verbs += /mob/living/carbon/human/proc/execution
 		H.verbs += /mob/living/carbon/human/proc/great_hunt
