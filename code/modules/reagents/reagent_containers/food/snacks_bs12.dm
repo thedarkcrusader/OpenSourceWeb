@@ -303,7 +303,7 @@
 
 	else if(istype(W, /obj/item/weapon/reagent_containers/food/snacks/breadsys/ontop/salami))
 		new /obj/item/weapon/reagent_containers/food/snacks/breadsys/ontop/salsandwich(spawnloc)
-		user << "You make a salami sandwich."
+		user << "You make a Gabagool sandwich."
 		qdel(W)
 		qdel(src)
 
@@ -531,7 +531,7 @@
 
 // the stick of salami
 /obj/item/weapon/reagent_containers/food/snacks/breadsys/salamistick
-	name = "salami stick"
+	name = "Gabagool stick"
 	desc = "Don't choke on this, find a knife."
 	icon_state = "salamistick3"
 
@@ -559,7 +559,7 @@
 
 // a slice of salami
 /obj/item/weapon/reagent_containers/food/snacks/breadsys/ontop/salami
-	name = "salami"
+	name = "Gabagool"
 	desc = "A preserved meat."
 	icon_state = "salami"
 	stateontop = "salami3"
@@ -607,8 +607,8 @@
 
 // a salami sandwich
 /obj/item/weapon/reagent_containers/food/snacks/breadsys/ontop/salsandwich
-	name = "salami sandwich"
-	desc = "This is a salami sandwich.. Really, that's all... No strange spices mixed in."
+	name = "Gabagool sandwich"
+	desc = "This is a Gabagool sandwich.. Really, that's all... No strange spices mixed in."
 	icon_state = "salsandwich"
 
 	//heal_amt = 2
@@ -645,7 +645,7 @@
 	if(istype(W,/obj/item/weapon/kitchen/utensil/knife))
 		var/turf/spawnloc = foodloc(user, src)
 		new /obj/item/weapon/reagent_containers/food/snacks/breadsys/ontop/salami(spawnloc)
-		user << "You slice a piece of salami"
+		user << "You slice a piece of Gabagool"
 		amount--
 		if(amount <= 4)
 			icon_state = "salamistick2"
