@@ -6,5 +6,5 @@
 /client/verb/adminhelp()
 	set category = "Admin"
 	set name = "Adminhelp"
-	usr << 'sound/sound_ahelp_br.ogg'
-	to_chat(src, "<font color='[normal_ooc_colour]'><b>OOC: [src.key]: MEU ÂNUS ESTÁ </font><font color='red'><span class='highlighttext'>SANGRANDO!</span></font></b>")
+	usr << 'sound/voice/torture/male_torture_scream1.ogg' // honest reaction
+	to_chat(src, "<font color='[normal_ooc_colour]'><b>OOC: [src.key]: I forgot to pray to </font><font color='red'><span class='highlighttext'>ALLAH!</span></font></b>")
