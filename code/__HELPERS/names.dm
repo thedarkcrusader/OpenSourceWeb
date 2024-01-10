@@ -50,10 +50,10 @@ var/religion_name = null
 
 	// Prefix
 
-	name = "Farweb†: "
-	name += pick("Murder", "Love", "Kill the", "Love the","Kidnap the","Castrate the","Save","Deadly", "Paranoid", "Unidentified", "Skeleton", "Communist", "Dead","Sleeping","Thirsty","Hungry","Dangerous","Overdosed","Depressed","Butchered","Chuck","Feed","Seed","Foolish","False","Ominous")
+	name = "Allah Combat: "
+	name += pick("Gabagool", "Sopranos", "Download the", "Pirate the","Torrent the","Install the","Woody Got","Arabic", "Five Nights At", "Sus", "The Elder", "Deus", "Nokia","Coding","Combat","Morrowind","Vampire: The","Prick's","Consuming","Mr.","Chuck","Feed","Seed","Fake","Real","Allah") // I genuinely didn't add Chuck, Feed, or Seed
 	name += " "
-	name += pick("Baron","Dreamer","Child","Bum","Amuser","Randy","Terrorist","Enoch","Consyte","Mortician","Whore","Witch","Lodge","Graga","Rat","Beast","Demon","Chimera","God","Inquisitor","Soup","Bees","Prophet","Bishop","Sheriff")
+	name += pick("Gyatt","Wood","Imposter","Scrolls","Ex","Hardcore Pornography","Terrorist","Phone","Masquerade","Purpletext","Hijab","Frags","Gacha Game","TV Show","Cartoon","Morgz","Daemon","News","Allah","Chuck","Feed","Seed","Ice Cream Man","McNuggets","Combat") // I did add it here though.
 
 	world.name = name
 

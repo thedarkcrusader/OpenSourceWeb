@@ -819,11 +819,11 @@ var/global/log_adminsay = 1
 		return //alert("Round end delayed", null, null, null, null, null)
 	going = !( going )
 	if (!( going ))
-		to_chat(world, "<span class='highlighttext'>Curses!</span> <span class='horriblestate'>THE ROUND HAS BEEN DELAYED!</span>")
-		log_admin("[key_name(usr)] delayed the game.")
+		to_chat(world, "<span class='highlighttext'>HARAM!</span> <span class='horriblestate'>ALLAH COMBAT HAS BEEN DELAYED!</span>")
+		log_admin("[key_name(usr)] has delayed Allah Combat.")
 	else
-		to_chat(world,"<span class='highlighttext'>Thank God!</span> <span class='horriblestate'>The game will start soon!</span>")
-		log_admin("[key_name(usr)] removed the delay.")
+		to_chat(world,"<span class='highlighttext'>Mashallah!</span> <span class='horriblestate'>Allah Combat will start soon!</span>")
+		log_admin("[key_name(usr)] has begun the golden age for Allah Combat.")
 
 /datum/admins/proc/adjump()
 	set category = "Server"
