@@ -119,6 +119,10 @@
 	throw_range = 6
 	hitsound= 'sound/lfwbsounds/shlep.ogg'
 
+
+/obj/item/weapon/whip/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+
+
 /obj/machinery/chem_master/holy_altar/attack_hand(mob/user as mob)
 	if(user)
 		beaker?:loc = src.loc
