@@ -5,12 +5,11 @@ body {
     background-size: auto;
     overflow: hidden;
     word-break: break-word;
-    font-family: "Droser","Verdana",sans-serif;
-    color:#9d9c96;
+    font-family: PTSANS;src: url(PTSANS.ttf)f;
+    color:#000000;
     font-size:14px;
     cursor: url('pointer.cur'), auto;
     margin: 0px;
-    text-shadow: 0px 0px 4px rgba(0,0,0, 0.9);
     
     border: 0px;
     padding: 0px;
@@ -23,18 +22,17 @@ border-collapse: collapse;
 }
 .trstats
 {
-background: rgba(255, 255, 0, 0.1);
+background: rgba(0, 0, 0, 0.1);
 }
 .trstats:nth-child(2n) 
-{ background: rgba(255, 0, 0, 0.1);}
+{ background: rgba(0, 0, 0, 0.1);}
 
 .ST
 {
     font-weight: bold;
     font-size:150%;
-    font-family: "Cond",sans-serif;
-    color: #d87474;
-    text-shadow: 0px 0px 5px #ff0000;
+    font-family: PTSANS;src: url(PTSANS.ttf);
+    color: #000000;
 }
 .ST.SMALLER
 {
@@ -42,13 +40,12 @@ background: rgba(255, 255, 0, 0.1);
 }
 .ST.MINOR
 {
-    color: #c84040;
+    color: #000000;
     
 }
 .ST.DES
 {
-    color: #d8d874;
-    text-shadow: 0px 0px 5px #ffff00;
+    color: #000000;
 }
 .smallstat
 {
@@ -56,18 +53,18 @@ background: rgba(255, 255, 0, 0.1);
     color: #a80404;
     text-shadow: 0px 0px 3px #a80404;
 }
-.verb {float: top; font-family: "Cond";text-shadow: 0px 0px 3px #a81212;
-color:#ac3b49; text-decoration:none;outline: none;border: none;font-size:90%;}
-.verb.dim { color:#707070; text-shadow: 0px 0px 3px #707070;}
+.verb {float: top; font-family: PTSANS;src: url(PTSANS.ttf);
+color:#000000; text-decoration:none;outline: none;border: none;font-size:90%;}
+.verb.dim { color:#000000;}
 .verb.smaller { font-size:80%;}
-.verb.dim:hover{color: #f662ff; word-break: keep-all; }
-.verb:hover {color:#999;background:rgba(255,0,0,0.2);outline: none;border: none;font-weight:bold; word-break: keep-all;}
+.verb.dim:hover{color: #000000; word-break: keep-all; }
+.verb:hover {color:##000000;background:rgba(0,0,0,0.2);outline: none;border: none;font-weight:bold; word-break: keep-all;}
 .verb:focus{outline:none;}
 
 #buttonpanel
 {
     top: 18px;
-    left:-7px;
+    left: -7px;
     height: 176px;
     width: 44px;
     position: absolute;
@@ -89,8 +86,7 @@ color:#ac3b49; text-decoration:none;outline: none;border: none;font-size:90%;}
 #loading
 {
     font-size:110%;
-    color: #fd5b5b;
-    text-shadow: 0px 0px 2px rgba(255,0,0, 0.9);
+    color: #000000;
 }
 #note
 {
