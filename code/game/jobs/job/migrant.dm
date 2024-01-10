@@ -192,11 +192,8 @@ var/mob/FortLordHand
 						H.forceMove(L.loc)
 	switch(H.migclass)
 		if("Adventurer")
-			H.equip_to_slot_or_del(new /obj/item/weapon/claymore/rusty(H), slot_l_hand)
-			H.equip_to_slot_or_del(new /obj/item/clothing/head/armingcap(H), slot_head)
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/migrant(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/migrant(H), slot_back)
-			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_cuirass(H), slot_wear_suit)
 			H.my_skills.CHANGE_SKILL(SKILL_MELEE, rand(11,11))
 			H.my_skills.CHANGE_SKILL(SKILL_RANGE, rand(6,9))
 			H.my_skills.CHANGE_SKILL(SKILL_UNARM, rand(0,1))
@@ -210,6 +207,89 @@ var/mob/FortLordHand
 			H.my_stats.ht = rand(10,11)
 			H.my_stats.dx = rand(9,10)
 			H.my_stats.it = rand(9,10)
+			var/skyrimadventurermoment = pick("normal","normal1","normal2","normal3","normal4","normal5","knightlarp","technology","barbarian","goofy","daggerfuck")
+			switch(skyrimadventurermoment)
+				if("normal")
+					H.equip_to_slot_or_del(new /obj/item/weapon/claymore/rusty(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/armingcap(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_cuirass(H), slot_wear_suit)
+				if("normal1")
+					H.equip_to_slot_or_del(new /obj/item/weapon/claymore/rusty/rapier(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/armingcap(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_cuirass(H), slot_wear_suit)
+				if("normal2")
+					H.equip_to_slot_or_del(new /obj/item/weapon/claymore/rusty/sabre(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/armingcap(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_cuirass(H), slot_wear_suit)
+				if("normal3")
+					H.equip_to_slot_or_del(new /obj/item/weapon/claymore/rusty(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/armingcap(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_breastplate(H), slot_wear_suit)
+				if("normal4")
+					H.equip_to_slot_or_del(new /obj/item/weapon/claymore/rusty(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/lw/ironopenhelmet(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_cuirass(H), slot_wear_suit)
+				if("normal5")
+					H.equip_to_slot_or_del(new /obj/item/weapon/claymore/silver(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/lw/openskulliron(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_breastplate(H), slot_wear_suit)
+				if("knightlarp")
+					H.equip_to_slot_or_del(new /obj/item/weapon/shield/largeshield(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/sheath/claymore(H), slot_belt)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/armingcap(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_plate(H), slot_wear_suit)
+					H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/iron(H), slot_shoes)
+					H.my_stats.st += 1
+					H.my_stats.ht += 1
+					H.my_stats.dx -= 1
+					H.my_skills.ADD_SKILL(SKILL_SWORD, 4)
+				if("technology")
+					H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/leet/laser(H), slot_belt)
+					H.equip_to_slot_or_del(new /obj/item/weapon/cell/crap(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(H), slot_glasses)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/vest/flakjacket(H), slot_wear_suit)
+					H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/infantry(H), slot_shoes)
+					H.my_stats.st -= 2
+					H.my_stats.ht -= 2
+					H.my_stats.pr += 2
+					H.my_stats.it += 4
+					H.my_skills.ADD_SKILL(SKILL_RANGE, 4)
+				if("barbarian")
+					H.equip_to_slot_or_del(new /obj/item/weapon/flame/torch/on(H), slot_belt) // the code actually allows this
+					H.equip_to_slot_or_del(new /obj/item/weapon/hatchet/bronze(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/weapon/hatchet/bronze(H), slot_r_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/furhat(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/leja(H), slot_wear_suit)
+					H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/leatherboots(H), slot_shoes)
+					H.my_stats.st += 4
+					H.my_stats.ht += 2
+					H.my_stats.dx += 2
+					H.my_stats.it -= 4
+					H.my_skills.ADD_SKILL(SKILL_SWING, 4)
+				if("goofy")
+					H.equip_to_slot_or_del(new /obj/item/weapon/flame/torch/on(H), slot_belt) // the code actually allows this
+					H.equip_to_slot_or_del(new /obj/item/weapon/shield/copper(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/weapon/melee/golfclub(H), slot_r_hand)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/lw/hevhelm(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/gold_breastplate(H), slot_wear_suit)
+					H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/fetish(H), slot_shoes)
+					H.my_stats.st = 10
+					H.my_stats.ht = 10
+					H.my_stats.dx = 10
+					H.my_stats.it = 10
+					H.my_stats.pr = 10
+					H.my_stats.im = 10
+					H.my_stats.wp = 10
+					H.my_skills.ADD_SKILL(SKILL_SWING, 4)
+				if("daggerfuck")
+					H.equip_to_slot_or_del(new /obj/item/weapon/kitchen/utensil/knife/dagger(H), slot_l_hand)
+					H.equip_to_slot_or_del(new /obj/item/daggerssheath/iron(H), slot_wrist_l)
+					H.equip_to_slot_or_del(new /obj/item/daggerssheath/iron(H), slot_wrist_r)
+					H.equip_to_slot_or_del(new /obj/item/daggerssheath/iron(H), belt)
+					H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/lw/leatherhelm(H), slot_head)
+					H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/iron_breastplate(H), slot_wear_suit)
+					H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
+					H.my_skills.ADD_SKILL(SKILL_KNIFE, 4)
 			H.add_perk(/datum/perk/ref/strongback)
 			H.add_perk(/datum/perk/illiterate)
 			H.terriblethings = TRUE

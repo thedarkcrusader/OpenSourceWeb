@@ -2,7 +2,7 @@ datum/job/ordinator
 	title = "Marduk"
 	titlebr = "Marduk"
 	flag = HOS
-	department_head = list("meister")
+	department_head = list("Allah") // "meister" what? no, really. what?
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
@@ -14,7 +14,7 @@ datum/job/ordinator
 	minimal_access = list(meistery,sanctuary,garrison,keep,hump,courtroom,soilery,lifeweb, baronquarter, marduk, innkeep, hand_access)
 	minimal_player_age = 14
 	latejoin_locked = TRUE
-	jobdesc = "Being a man of strong will, heroic strength, and incredible combat prowess, the Marduk is one of the most horrifying men one will ever face in battle. His formidable skills are recognized throughout the Salarian province. Champion of the Baron of Firethorn, he is sometimes sent to take part in hastilude and martial games among more wealthy nobility. Many more influential nobles have offered him a seat among their mighty men, but his loyalty towards his Lord is undying."
+	jobdesc = "Being a man of strong will, heroic strength, and incredible combat prowess, the Sub-Bashar is one of the most horrifying men one will ever face in Allah Combat. His formidable skills are recognized throughout the Middle East. Champion of the Baron of Firethorn, he is sometimes sent to take part in hastilude and martial games among more wealthy nobility. Many more influential nobles have offered him a seat among their mighty men, but his loyalty towards his Lord is undying."
 	sex_lock = MALE
 	money = 66
 	thanati_chance = 1
@@ -23,20 +23,23 @@ datum/job/ordinator
 			return 0
 		..()
 		H.voicetype = "strong"
+		H.real_name = "Sub-Bashar [H.real_name]"
 		H.height = rand(210,240)
-		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
 		/*		if(prob(20))
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/marduk_alt(H), slot_wear_suit)
 		else
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/marduk(H), slot_wear_suit) */ //missing female sprite
-		H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/marduk(H), slot_wear_suit)
-		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
 		H.set_dir(NORTH)
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/security/censor(H), slot_wrist_r)
 		H.equip_to_slot_or_del(new /obj/item/combatsheath/Censor(H), slot_wrist_l)
-		H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/leet/sparq(H), slot_belt)
-		H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sechelm/veteran(H), slot_r_hand)
 		H.equip_to_slot_or_del(new /obj/item/sheath/scimitar(H), slot_l_hand)
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/soulbreaker(H), slot_shoes)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/soulbreaker(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/soulbreaker(H), slot_gloves)
+		H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/soulbreaker/garrisoncaptain(H), slot_r_hand)
+		H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/soulbreaker/garrison(H), slot_wear_suit)
+		H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/MERCY/soulbreaker(H), slot_back)
+		H.equip_to_slot_or_del(new /obj/item/weapon/whip(H), slot_belt) // this guy is a fucking loot pinata
 		H.religion = "Allah"
 		H.add_perk(/datum/perk/ref/strongback)
 		H.terriblethings = TRUE
@@ -77,6 +80,22 @@ datum/job/ordinator
 		H.equip_to_slot_or_del(new /obj/item/daggerssheath/iron(H), slot_wrist_l)
 		H.terriblethings = TRUE
 		H.religion = "Allah"
+		// Let's assume everyone is villain tier
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/soulbreaker(H), slot_shoes)
+		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/soulbreaker(H), slot_w_uniform)
+		H.equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/soulbreaker(H), slot_gloves)
+		H.set_dir(NORTH)
+		H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/soulbreaker(H), slot_r_hand)
+		H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/soulbreaker/garrison(H), slot_wear_suit)
+		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/security(H), slot_wrist_r)
+		H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/MERCY/pistol(H), slot_belt) // IT'S A NERF, DUDE
+		H.equip_to_slot_or_del(new /obj/item/sheath/scimitar(H), slot_l_hand)
+		H.my_skills.CHANGE_SKILL(SKILL_MELEE, 12)
+		H.my_skills.CHANGE_SKILL(SKILL_RANGE, 11)
+
+
+/*
+// ALL THIS SHIT ONLY MATTERS IF YOU WANNA DO WHITELIST SHIT. YOU DON'T WANT TO DO WHITELIST SHIT.
 		if(pigpluslist?.Find(ckey(H?.client?.key)))
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(H), slot_shoes)
@@ -125,7 +144,7 @@ datum/job/ordinator
 			H.my_stats.ht = rand(10,11)
 			H.my_stats.dx = rand(9,10)
 			H.my_stats.it = rand(9,10)
-
+*/
 		H.create_kg()
 		return 1
 
@@ -226,11 +245,18 @@ datum/job/ordinator
 		else
 			H.set_species("Child")
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/child_jumpsuit(H), slot_w_uniform)
-			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/child/shoes(H), slot_shoes)
+			H.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/child/squire(H), slot_shoes)
 			H.set_dir(NORTH)
-			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/squire(H), slot_wear_suit)
 			H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/cheap/sec(H), slot_wrist_r)
-			H.vice = null
+			if(prob(20)) // I accidentally made a real child censor armor replacement despite the special not existing, now I have to justify this effort
+				H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ycensor/garrisoncaptain(H), slot_wear_suit)
+				H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/soulbreaker(H), slot_r_hand)
+				H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/MERCY/pistol(H), slot_l_hand)
+				H.my_stats.st += 2 // they should have 13 now.
+			else
+				H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ycensor/garrison(H), slot_wear_suit)
+				H.equip_to_slot_or_del(new /obj/item/clothing/head/eunuch(H), slot_r_hand)
+			H.vice = null // why were child squires just viceless and apparently exemplars of discipline? who built these kids???
 			H.religion = "Allah"
 			H.add_perk(/datum/perk/heroiceffort)
 			H.add_perk(/datum/perk/morestamina)

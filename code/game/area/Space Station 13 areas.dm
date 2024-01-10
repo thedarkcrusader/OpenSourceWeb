@@ -454,9 +454,9 @@ var/list/ghostteleportlocs = list()
 	var/mob/living/carbon/human/L = A
 	if(!L.AreasEntered.Find(src))
 		if(L.religion == "Thanati")
-			to_chat(L, "<span class='jogtowalk'><i><b>Church</b> - Your body cringes, sickened by the idoletry lining the room of the incomplete Creator. Contempt fills you, as you alone understand that it is all lies. There is no salvation for you after all, and you intend to show that there is no salvation for them, either. The Overlord shall create a new universe, and redemption shall be gained upon the death of the last person witnessing this one. Praise Tzchernobog!</i></span>")
+			to_chat(L, "<span class='jogtowalk'><i><b>Mosque</b> - Your body cringes, sickened by the idoletry lining the room of the incomplete Creator. Contempt fills you, as you alone understand that it is all lies. There is no salvation for you after all, and you intend to show that there is no salvation for them, either. The Overlord shall create a new universe, and redemption shall be gained upon the death of the last person witnessing this one. Praise Tzchernobog!</i></span>")
 		else
-			to_chat(L, "<span class='jogtowalk'><i><b>Church</b> - Stone effigies and sculptures of God look down upon you, His illustrations that are weaved onto the sloped ceiling dance before you in the flickering light. The place of prayer, forgiveness to those who atone for their sins, and for all who have yet to seperate themselves from Him. God be saved.</i></span>")
+			to_chat(L, "<span class='jogtowalk'><i><b>Mosque</b> - Stone effigies and sculptures of Allah look down upon you, His illustrations that are weaved onto the sloped ceiling dance before you in the flickering light. The place of prayer, forgiveness to those who atone for their sins, and for all who have yet to seperate themselves from Him. Allahu akbar.</i></span>")
 		L.AreasEntered.Add(src)
 
 /area/dunwell/station/church/bishopoffice

@@ -1643,6 +1643,8 @@
 				return "Gods"
 			else
 				return src.old_ways.god
+		if("ProofOfConcept")
+			return "Developers"
 		else
 			return "God"
 

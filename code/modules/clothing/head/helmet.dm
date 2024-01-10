@@ -401,7 +401,7 @@
 /obj/item/clothing/head/helmet/sechelm/cerbhelm
 	name = "cerberus helmet"
 	icon_state = "cerbhelm"
-	shockable = FALSE
+	shockable = TRUE
 	item_state = "cerbh"
 	armor_type = ARMOR_METAL
 
@@ -457,6 +457,7 @@
 	body_parts_covered = HEAD|FACE|MOUTH|THROAT
 	cold_protection = HEAD|FACE|MOUTH|THROAT
 	min_cold_protection_temperature = 1500
+	shockable = TRUE
 	armor = list(melee = 60, bullet = 80, laser = 20, energy = 10, bomb = 50, bio = 0, rad = 0)
 	item_worth = 100
 	siemens_coefficient = 0
@@ -498,6 +499,63 @@
 			on = 0
 			icon_state = "soulbreaker[on]"
 			item_state = "soulbreaker[on]"
+			user.update_inv_head(1)
+			user.update_icons(1)
+		..()
+		return
+
+/obj/item/clothing/head/helmet/soulbreaker/garrisoncaptain
+	name = "Soulbreaker helmet w/ hat"
+	icon_state = "bruhgarrison0"
+	item_state = "bruhgarrison0"
+	armor_type = ARMOR_METAL
+	desc = "Helmet worn by the most loyal of guards of Allah. Allahu akbar"
+	flags = FPRINT|TABLEPASS|HEADCOVERSEYES|HEADCOVERSMOUTH|BLOCKHAIR
+	body_parts_covered = HEAD|FACE|MOUTH|THROAT
+	cold_protection = HEAD|FACE|MOUTH|THROAT
+	min_cold_protection_temperature = 1500
+	armor = list(melee = 60, bullet = 80, laser = 20, energy = 10, bomb = 50, bio = 0, rad = 0)
+	item_worth = 100
+	shockable = FALSE
+	siemens_coefficient = 0
+	brightness_on = 4
+	icon_action_button = "action_hardhat"
+	on = 0
+
+	attack_self(mob/user)
+		if(!isturf(user.loc))
+			user << "You cannot turn the light on while in this [user.loc]" //To prevent some lighting anomalities.
+			return
+		on = !on
+		user.update_inv_head()
+		user.update_icons()
+		icon_state = "bruhgarrison[on]"
+		item_state = "bruhgarrison[on]"
+		user.update_inv_head(0)
+		if(on)
+			set_light(2, 2,"#f4fad4")
+			user.update_inv_head(1)
+			user.update_icons(1)
+			user.update_inv_head(0)
+		else
+			set_light(0)
+
+	pickup(mob/user)
+		if(on)
+			set_light(2, 2,"#f4fad4")
+			user.update_inv_head(1)
+			user.update_icons(1)
+
+	dropped(mob/user)
+		if(on)
+			set_light(2, 2,"#f4fad4")
+
+	on_enter_storage(mob/user)
+		if(on)
+			set_light(0)
+			on = 0
+			icon_state = "bruhgarrison[on]"
+			item_state = "bruhgarrison[on]"
 			user.update_inv_head(1)
 			user.update_icons(1)
 		..()

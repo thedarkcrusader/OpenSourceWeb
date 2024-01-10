@@ -176,11 +176,11 @@
 	description = "Você cometeu uns erros, mercenários vão te caçar."
 	descriptionen = "You've made some mistakes. Mercenaries will hunt you down."
 
-/datum/special/oathsilence
-	name = "oathsilence"
-	limitations = "Pós-Cristão"
-	description = "Você fez um voto de silêncio."
-	descriptionen = "You gave an oath of silence."
+/datum/special/cerberus
+	name = "cerberus"
+	limitations = "Tiamat"
+	description = "You need to get some gauntlets and a gorget."
+	descriptionen = "You need to get some gauntlets and a gorget."
 
 /datum/special/alcoholicsober
 	name = "alcoholicsober"
@@ -461,12 +461,12 @@
 			if("silverobols")
 				warning("Special de: [ckey ? "CKEY: [ckey]" : "SEM CKEY"] carregou.")
 			if("interestingperson")
-				src.my_stats.st += rand(-2,2)
-				src.my_stats.dx += rand(-2,2)
-				src.my_stats.pr += rand(-2,2)
-				src.my_stats.ht += rand(-2,2)
-				src.my_stats.im += rand(-2,2)
-				src.my_stats.it += rand(-2,2)
+				src.my_stats.st += rand(-4,4)
+				src.my_stats.dx += rand(-4,4)
+				src.my_stats.pr += rand(-4,4)
+				src.my_stats.ht += rand(-4,4)
+				src.my_stats.im += rand(-4,4)
+				src.my_stats.it += rand(-4,4)
 			if("badshape")
 				src.my_stats.ht -= 2
 				src.my_stats.st -= 2
@@ -563,8 +563,20 @@
 			if("alcoholicsober")
 				warning("Special de: [ckey ? "CKEY: [ckey]" : "SEM CKEY"] carregou.")
 				src.vice = "Alcoholic"
-			if("oathsilence")
+			if("cerberus")
 				warning("Special de: [ckey ? "CKEY: [ckey]" : "SEM CKEY"] carregou.")
+				if(src.job == "Tiamat")
+					equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(src), slot_shoes)
+					src.set_dir(NORTH)
+					equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sechelm/cerbhelm(src), slot_r_hand)
+					equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(src), slot_w_uniform)
+					equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/cerberusold(src), slot_wear_suit)
+					equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/security(src), slot_wrist_r)
+					equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/leet/sparq(src), slot_belt)
+					equip_to_slot_or_del(new /obj/item/weapon/cell/crap/leet/sparq(src), slot_l_hand)
+					src.religion = "Gray Church"
+					src.my_skills.CHANGE_SKILL(SKILL_MELEE, 12)
+					src.my_skills.CHANGE_SKILL(SKILL_RANGE, 11)
 			if("looksmart")
 				warning("Special de: [ckey ? "CKEY: [ckey]" : "SEM CKEY"] carregou.")
 				src.my_stats.it = rand(3,5)

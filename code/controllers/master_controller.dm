@@ -108,14 +108,14 @@ datum/controller/game_controller/proc/setup_objects()
 		else if(istype(U, /obj/machinery/atmospherics/unary/vent_scrubber))
 			var/obj/machinery/atmospherics/unary/vent_scrubber/T = U
 			T.broadcast_status()
-	
+
 	to_chat(world, "<span class = 'messages'>4. Letting there be light...</span>")
 	shadowcasting_controller.initialized = TRUE
 
 	to_chat(world, "<span class = 'messages'>5. Dirtying the fortress...")
 
 	var/evergreenGen = world.timeofday
-	to_chat(world, "<span class='adminlobby'>God made Evergreen in <b>[(evergreenGen - start_time)/10]</b> seconds.</pan>")
+	to_chat(world, "<span class='adminlobby'>Allah made Combat in <b>[(evergreenGen - start_time)/10]</b> seconds.</pan>")
 	CHECK_SLEEP_MASTER
 
 datum/controller/game_controller/proc/MushroomGen()		//Mostly a placeholder for now.
