@@ -3407,7 +3407,7 @@
 
 // the stick of salami
 /obj/item/weapon/reagent_containers/food/snacks/breadsys/salamistick
-	name = "salami stick"
+	name = "Gabagool stick"
 	desc = "Don't choke on this, find a knife."
 	icon_state = "salamistick3"
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/breadsys/ontop/salami
@@ -3424,7 +3424,7 @@
 
 // a slice of salami
 /obj/item/weapon/reagent_containers/food/snacks/breadsys/ontop/salami
-	name = "salami"
+	name = "Gabagool"
 	desc = "A preserved meat."
 	icon_state = "salami"
 	bitesize = 2
