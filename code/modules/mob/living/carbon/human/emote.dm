@@ -71,6 +71,10 @@
 			else if(religion == "ConsCult")
 				message = "<span class='examinebold'>[src]</span> <span class='examine'>nods sagely.</span>"
 				m_type = 1
+			else if(religion == "ProofOfConcept")
+				message = "<span class='examinebold'>[src]</span> <span class='examine'>worships religion. Wow.</span>"
+				call_sound_emote("praise")
+				m_type = 2 // 2 is voice, 1 is physical action
 			else if(religion == "Old Ways")
 				message = "<span class='examinebold'>[src]</span> <span class='examine'>throw \his hands up in a sacred salute!</span>"
 				m_type = 1
@@ -1004,6 +1008,29 @@
 					playsound(src.loc, pick('sound/voice/Alah.ogg'), 100, 1)
 				spawn(30) del(speech_bubble)
 				return
+// proof of concept
+			else if (src.religion == "ProofOfConcept")
+				sound2()
+				var/image/speech_bubble = image('icons/mob/talk.dmi',src,"h2")
+
+				if(src?.mind?.lord_hears_you != 2)
+					if(prob(15))
+						to_chat(src, "<span class='dreamershitbutitsactuallypassivebutitactuallyisbigandbold'>Your voice is strained!</span>")
+						src.mind.lord_hears_you += 1
+						src.my_stats.ht -= 4
+						spawn(30 SECONDS)
+							src.my_stats.ht += 4
+							src.mind.lord_hears_you -= 1
+
+				for(var/mob/M in view(src, world.view))
+					M << speech_bubble
+				if(src.job == "Weaponsmith")
+					playsound(src.loc, pick('sound/voice/liveagain.ogg'), 100, 1)
+				else
+					playsound(src.loc, pick('sound/voice/Hmmm.ogg'), 100, 1)
+				spawn(30) del(speech_bubble)
+				return
+// proof of concept
 			else
 				return
 

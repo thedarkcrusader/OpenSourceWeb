@@ -14,7 +14,7 @@ datum/job/ordinator
 	minimal_access = list(meistery,sanctuary,garrison,keep,hump,courtroom,soilery,lifeweb, baronquarter, marduk, innkeep, hand_access)
 	minimal_player_age = 14
 	latejoin_locked = TRUE
-	jobdesc = "Being a man of strong will, heroic strength, and incredible combat prowess, the Marduk is one of the most horrifying men one will ever face in battle. His formidable skills are recognized throughout the Salarian province. Champion of the Baron of Firethorn, he is sometimes sent to take part in hastilude and martial games among more wealthy nobility. Many more influential nobles have offered him a seat among their mighty men, but his loyalty towards his Lord is undying."
+	jobdesc = "Being a man of strong will, heroic strength, and incredible combat prowess, the Sub-Bashar is one of the most horrifying men one will ever face in Allah Combat. His formidable skills are recognized throughout the Middle East. Champion of the Baron of Firethorn, he is sometimes sent to take part in hastilude and martial games among more wealthy nobility. Many more influential nobles have offered him a seat among their mighty men, but his loyalty towards his Lord is undying."
 	sex_lock = MALE
 	money = 66
 	thanati_chance = 1
@@ -23,6 +23,7 @@ datum/job/ordinator
 			return 0
 		..()
 		H.voicetype = "strong"
+		H.real_name = "Sub-Bashar [H.real_name]"
 		H.height = rand(210,240)
 		/*		if(prob(20))
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/marduk_alt(H), slot_wear_suit)
@@ -38,6 +39,7 @@ datum/job/ordinator
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/soulbreaker/garrisoncaptain(H), slot_r_hand)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/soulbreaker/garrison(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/MERCY/soulbreaker(H), slot_back)
+		H.equip_to_slot_or_del(new /obj/item/weapon/whip(H), slot_belt) // this guy is a fucking loot pinata
 		H.religion = "Allah"
 		H.add_perk(/datum/perk/ref/strongback)
 		H.terriblethings = TRUE
