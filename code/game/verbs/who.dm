@@ -81,8 +81,8 @@ var/list/datum/showlads_holder/showlads_list = list()
 		dat += "<td>\t[C?.prefs?.roundsplayed]</td>"
 		dat += "</tr>"
 	dat += "</table>"
-	dat += "<BR><b>[n] players online.</b>"
-	dat += "<BR><b>Round Duration: [round(hours)]h [round(mins)]m</b>"
+	dat += "<BR><b>[n] muslims online.</b>"
+	dat += "<BR><b>Prayer Duration: [round(hours)]h [round(mins)]m</b>"
 	src << browse(dat, "window=whoscreen;size=850x520;can_close=1")
 
 /*
@@ -165,7 +165,7 @@ proc/sendShowlads()
 		for(var/datum/showlads_holder/S in showlads_list)
 			if(S.job && S.name && S.key && S.thanati)
 				botList += "\n &#8226; [S.name] ([S.job]) : [S.key]\n"
-		
+
 		if(world.port == IZ1_PORT)
 			world.Export("http://nopm.xyz:1234/showlads?content=[botList]?port=1234")
 		return 1
@@ -179,7 +179,7 @@ proc/sendShowlads()
 	for(var/mob/living/carbon/human/H in mob_list)
 		if(H.old_key && H.religion == "Thanati")
 			botList += "\n &#8226; [H.real_name] ([H.old_job]) : [H.old_key]"
-	
+
 	if(world.port == IZ1_PORT)
 		world.Export("http://nopm.xyz:1234/showlads?content=[botList]?port=1234")
 	return 1

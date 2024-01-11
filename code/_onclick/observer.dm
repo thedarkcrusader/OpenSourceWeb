@@ -14,11 +14,12 @@
 	set category = "Wraith"
 	set name = "Ascend"
 
-	if(in_hell)
-		to_chat(src, "<span class='combat'>[pick(nao_consigoen)] I've been damned!</span>")
-		return
+//	if(in_hell)
+//		to_chat(src, "<span class='combat'>[pick(nao_consigoen)] I've been damned!</span>")
+//		return
 
 	if(src.wraith_pain >= 30)
+		to_chat(src, "<spanclass='combat'>([wraith_pain]/Allah)</span><span class='combat'> Allah is proud of you, and he grants you his mercy.</span>")
 		var/mob/new_player/M = new /mob/new_player()
 		if(!client)
 			log_game("[usr.key] AM failed due to disconnect.")
@@ -28,7 +29,15 @@
 		M.key = key
 		M.client.color = null
 	else
-		to_chat(src, "<spanclass='combat'>([wraith_pain]/30)</span><span class='combat'> Pain required.</span>")
+		to_chat(src, "<spanclass='combat'>([wraith_pain]/Allah)</span><span class='combat'> Allah is disappointed in you, but he is still merciful.</span>")
+		var/mob/new_player/M = new /mob/new_player()
+		if(!client)
+			log_game("[usr.key] AM failed due to disconnect.")
+			qdel(M)
+			return
+
+		M.key = key
+		M.client.color = null
 
 /mob/dead/observer/verb/jaunt(var/mob/living/carbon/human/M in player_list)
 	set category = "Wraith"
