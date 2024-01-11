@@ -607,7 +607,7 @@
 		temp = H.organs_by_name["head"]
 		var/mouthfree = !(H.wear_mask && temp)
 		temp = P.organs_by_name["head"]
-		var/mouthfree_p = !(P.wear_mask && temp)
+		var/mouthfree_p = !(P.wear_mask && temp) // no one ever fix this btw
 		//var/haspenis = H.has_penis()//(src.client.ckey in futa) || H.has_penis()//(H.gender == MALE && H.potenzia > -1 && H.species.genitals))
 		//var/haspenis_p = P.has_penis()//(src.client.ckey in futa) || P.has_penis()//(H.gender == MALE && H.potenzia > -1 && H.species.genitals))
 		//var/hasvagina = (H.gender == FEMALE && H.species.genitals && !H.has_penis() && !H.isFemboy())
