@@ -26,7 +26,7 @@ var/global/list/remigrator = list("johnegbert3")
 //REMIGRATION
 var/global/list/thirtycm = list("johnegbert3")
 //TRAP APOC
-var/global/list/trapapoc = list("Sharmat")
+var/global/list/trapapoc = list("Sharmat", "sylphyn")
 //OUTLAW
 var/global/list/outlaw = list() // not yet
 //ADULT SQUIRE
