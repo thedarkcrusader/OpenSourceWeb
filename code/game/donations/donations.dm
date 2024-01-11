@@ -47,7 +47,7 @@
 		itemstake.Add("*Accordion*")
 	if(H.ckey in luxurydonation)
 		itemstake.Add("*Amulet of Lechery*")
-	if(H.ckey == "absenceofwords" || H.ckey == "spookypineapple" || H.ckey == "bailol" || H.ckey == "stimusz")
+	if(H.ckey == "Ezo1" || H.ckey == "spookypineapple" || H.ckey == "bailol" || H.ckey == "stimusz") // sorry, absenceofwords, but you're fired
 		itemstake.Add("*Black Cloak*")
 	if(H.ckey == "absenceofwords" || H.ckey == "spookypineapple" || H.ckey == "stimusz")
 		itemstake.Add("*Sailor Cloak*")
@@ -55,7 +55,7 @@
 		itemstake.Add("*Tricorn*")
 	if(H.ckey == "absenceofwords" || H.ckey == "spookypineapple")
 		itemstake.Add("*Sailor Shirt*")
-	if(H.ckey in mobilephone)
+	if(H.ckey == H.ckey)
 		itemstake.Add("*Mobile Phone*")
 	if(H.ckey == "sunkeneyes")
 		itemstake.Add("*Witch Hat*")
