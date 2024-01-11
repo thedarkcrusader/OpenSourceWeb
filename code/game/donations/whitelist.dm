@@ -10,9 +10,9 @@ var/global/list/urchin_donor = clients
 //TRIBUNAL VET
 var/global/list/tribunal_vet = clients
 //LORD
-var/global/list/lord = list("Ezo1") // clients doesn't work, someone find a better way. Until then, this guy will have it for no fucking reason.
+var/global/list/lord = clients // clients doesn't work, someone find a better way.
 //CRUSADER
-var/global/list/crusader = list("Ezo1") // clients doesn't work, someone find a better way. Until then, this guy will have it for no fucking reason.
+var/global/list/crusader = clients // clients doesn't work, someone find a better way.
 //TOPHAT
 var/global/list/tophat = list()
 //MONK
@@ -20,13 +20,13 @@ var/global/list/monk = list()
 //FUTA
 var/global/list/futa = list("I will fucking bury you")
 //30CM
-var/global/list/mobilephone = clients // clients doesn't work, someone find a better way.
+var/global/list/mobilephone = clients // clients doesn't work, but finding a better way for this isn't necessary now anyways
 //TELEFONE
 var/global/list/remigrator = list("johnegbert3")
 //REMIGRATION
 var/global/list/thirtycm = list("johnegbert3")
 //TRAP APOC
-var/global/list/trapapoc = list("Ezo1") // clients doesn't work, someone find a better way. Until then, this guy will have it for no fucking reason.
+var/global/list/trapapoc = list("Sharmat")
 //OUTLAW
 var/global/list/outlaw = list() // not yet
 //ADULT SQUIRE
@@ -49,7 +49,7 @@ var/global/list/bee_queen = list("ltkoepple")
 
 var/global/list/secret_devs = list("sharmat")
 
-var/global/list/patreons = list("Ezo1") // just a medal
+var/global/list/patreons = list("Allah") // just a medal
 #define PIGPLUS 1
 #define COMRADE 2
 #define VILLAIN 3

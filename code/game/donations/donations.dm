@@ -47,7 +47,7 @@
 		itemstake.Add("*Accordion*")
 	if(H.ckey in luxurydonation)
 		itemstake.Add("*Amulet of Lechery*")
-	if(H.ckey == "Ezo1" || H.ckey == "spookypineapple" || H.ckey == "bailol" || H.ckey == "stimusz") // sorry, absenceofwords, but you're fired
+	if(H.ckey == "absenceofwords" || H.ckey == "spookypineapple" || H.ckey == "bailol" || H.ckey == "stimusz")
 		itemstake.Add("*Black Cloak*")
 	if(H.ckey == "absenceofwords" || H.ckey == "spookypineapple" || H.ckey == "stimusz")
 		itemstake.Add("*Sailor Cloak*")
@@ -55,12 +55,14 @@
 		itemstake.Add("*Tricorn*")
 	if(H.ckey == "absenceofwords" || H.ckey == "spookypineapple")
 		itemstake.Add("*Sailor Shirt*")
-	if(H.ckey == H.ckey)
+	if(H.ckey in H.ckey)
 		itemstake.Add("*Mobile Phone*")
 	if(H.ckey == "sunkeneyes")
 		itemstake.Add("*Witch Hat*")
 	if(H.ckey == "notapresident")
 		itemstake.Add("*Svalinn Cloak*")
+	if(H.ckey == "Ezo1") // just give this to random people for shits and giggles
+		itemstake.Add("*Jihad Killaz Package*")
 	if(is_dreamer(H))
 		itemstake.Add("*Dreamer's Diary*")
 		itemstake.Add("*Dreamer's Pen*")
@@ -106,6 +108,11 @@
 			spawnitem = /obj/item/clothing/suit/donor/slojanko/dress
 		if("*Svalinn Cloak*")
 			spawnitem = /obj/item/weapon/storage/backpack/svalinncloak
+		if("*Jihad Killaz Package*")
+			spawnitem = /obj/item/weapon/grenade/syndieminibomb/frag
+			spawnitem = /obj/item/weapon/claymore/scimitar/silver
+			spawnitem = /obj/item/weapon/gun/energy/taser/MERCY/soulbreaker
+			spawnitem = /obj/item/clothing/head/eunuch
 		if("*Mobile Phone*")
 			spawnitem = /obj/item/device/cellphone/Donator
 		if("*Water Bottle*")
