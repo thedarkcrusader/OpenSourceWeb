@@ -208,7 +208,7 @@ var/debt = 1
 	list(name = "Vintage Wine", path = /obj/item/weapon/reagent_containers/glass/bottle/pwine, price = 80, code = "oldwine"),
 	list(name = "Vermouth", path = /obj/item/weapon/reagent_containers/glass/bottle/vermouth, price = 50, code = "vermouth"),
 	list(name = "Beer", path = /obj/item/weapon/reagent_containers/glass/bottle/beer, price = 8, code = "beer"),
-	list(name = "Salami", path = /obj/item/weapon/reagent_containers/food/snacks/breadsys/salamistick, price = 12, code = "salami"))
+	list(name = "Gabagool", path = /obj/item/weapon/reagent_containers/food/snacks/breadsys/salamistick, price = 12, code = "salami"))
 	name = "Innkeep Vendor"
 	icon = 'vending.dmi'
 	icon_state = "production"

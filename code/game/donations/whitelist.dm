@@ -1,38 +1,38 @@
 /////////////FATES/////////////
 //SEASPOTTER MERC
-var/global/list/seaspotter_merc = list("comicao1")
+var/global/list/seaspotter_merc = clients
 //RED DAWN MERC
-var/global/list/reddawn_merc = list("comicao1")
+var/global/list/reddawn_merc = clients
 //MERCENARY
-var/global/list/mercenary_donor = list("comicao1")
+var/global/list/mercenary_donor = clients
 //URCHIN
-var/global/list/urchin_donor = list("comicao1")
+var/global/list/urchin_donor = clients
 //TRIBUNAL VET
-var/global/list/tribunal_vet = list()
+var/global/list/tribunal_vet = clients
 //LORD
-var/global/list/lord = list()
+var/global/list/lord = clients // clients doesn't work, someone find a better way.
 //CRUSADER
-var/global/list/crusader = list()
+var/global/list/crusader = clients // clients doesn't work, someone find a better way.
 //TOPHAT
-var/global/list/tophat = list()//list("Willkito")
+var/global/list/tophat = list()
 //MONK
 var/global/list/monk = list()
 //FUTA
-var/global/list/futa = list()
+var/global/list/futa = list("I will fucking bury you")
 //30CM
-var/global/list/mobilephone = list("bailol", "comicao1", "matkotaur", "darklordchinchin")
+var/global/list/mobilephone = clients // clients doesn't work, but finding a better way for this isn't necessary now anyways
 //TELEFONE
 var/global/list/remigrator = list("johnegbert3")
 //REMIGRATION
 var/global/list/thirtycm = list("johnegbert3")
 //TRAP APOC
-var/global/list/trapapoc = list("comicao1")
+var/global/list/trapapoc = list("Sharmat", "sylphyn")
 //OUTLAW
-var/global/list/outlaw = list()
+var/global/list/outlaw = list() // not yet
 //ADULT SQUIRE
 var/global/list/adultsquire = list()
 //ITEMS
-var/global/list/waterbottledonation = list()
+var/global/list/waterbottledonation = clients // doesn't really work
 var/global/list/luxurydonation = list()
 var/global/list/pjack = list()
 //OOC COLOR
@@ -47,9 +47,9 @@ var/global/list/baliset = list("bailol", "comicao1", "darklevel", "matkotaur", "
 var/global/list/black_cloak = list("bailol", "wesdo", "matkotaur", "darklordchinchin", "necbromancer", "sylphyn", "t1gws")
 var/global/list/bee_queen = list("ltkoepple")
 
-var/global/list/secret_devs = list("comicao1", "darklevel", "ssix", "frozenguy5")
+var/global/list/secret_devs = list("sharmat")
 
-var/global/list/patreons = list("darklevel")
+var/global/list/patreons = list("Allah") // just a medal
 #define PIGPLUS 1
 #define COMRADE 2
 #define VILLAIN 3

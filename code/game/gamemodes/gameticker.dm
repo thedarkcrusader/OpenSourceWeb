@@ -329,7 +329,7 @@ var/turf/MiniSpawn
 			C.prefs.savefile_update()
 		announce_events()
 		apply_events()
-		world << sound('sound/AI/welcome.ogg') // Skie
+		world << sound('sound/music/wakeup.ogg') // Skie
 		ooc_allowed = FALSE
 	//new random event system is handled from the MC.
 

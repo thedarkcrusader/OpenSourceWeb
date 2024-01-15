@@ -29,7 +29,7 @@
 
 /obj/structure/lifeweb/proc/init_items(var/mob/living/carbon/human/H)
 	itemstake = list()
-	if(H.ckey == "redvent")
+	if(H.ckey == H.ckey) // this will allow everyone to grab the item from behind the statue. don't touch this yet.
 		itemstake.Add("*Tattered Hood*")
 	if(H.ckey == "slojanko")
 		itemstake.Add("*Revealing Dress*")
@@ -37,7 +37,7 @@
 		itemstake.Add("*Thanati Robes*")
 	if(H.ckey in pjack)
 		itemstake.Add("*Pumpkin Jack*")
-	if(H.ckey in waterbottledonation)
+	if(H.ckey == H.ckey)
 		itemstake.Add("*Water Bottle*")
 	if(H.ckey in weeDonator)
 		itemstake.Add("*Weed*")
@@ -55,12 +55,14 @@
 		itemstake.Add("*Tricorn*")
 	if(H.ckey == "absenceofwords" || H.ckey == "spookypineapple")
 		itemstake.Add("*Sailor Shirt*")
-	if(H.ckey in mobilephone)
+	if(H.ckey in H.ckey)
 		itemstake.Add("*Mobile Phone*")
 	if(H.ckey == "sunkeneyes")
 		itemstake.Add("*Witch Hat*")
 	if(H.ckey == "notapresident")
 		itemstake.Add("*Svalinn Cloak*")
+	if(H.ckey == "Ezo1") // just give this to random people for shits and giggles
+		itemstake.Add("*Jihad Killaz Package*")
 	if(is_dreamer(H))
 		itemstake.Add("*Dreamer's Diary*")
 		itemstake.Add("*Dreamer's Pen*")
@@ -76,7 +78,7 @@
 			itemstake.Add("*Conceivable Boombox*")
 	if(H.ckey in hiden_obols)
 		itemstake.Add("*Obols*")
-	if(H.ckey in weeDonator)
+	if(H.ckey == H.ckey)
 		itemstake.Add("*Joint*")
 
 /obj/structure/lifeweb/proc/spawn_item(var/pickeditem, var/mob/living/carbon/human/receiver)
@@ -106,6 +108,11 @@
 			spawnitem = /obj/item/clothing/suit/donor/slojanko/dress
 		if("*Svalinn Cloak*")
 			spawnitem = /obj/item/weapon/storage/backpack/svalinncloak
+		if("*Jihad Killaz Package*")
+			spawnitem = /obj/item/weapon/grenade/syndieminibomb/frag
+			spawnitem = /obj/item/weapon/claymore/scimitar/silver
+			spawnitem = /obj/item/weapon/gun/energy/taser/MERCY/soulbreaker
+			spawnitem = /obj/item/clothing/head/eunuch
 		if("*Mobile Phone*")
 			spawnitem = /obj/item/device/cellphone/Donator
 		if("*Water Bottle*")

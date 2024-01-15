@@ -519,7 +519,7 @@
 		H.add_perk(/datum/perk/heroiceffort)
 		H.add_perk(/datum/perk/morestamina)
 		H.terriblethings = TRUE
-		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
+//		H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(H), slot_w_uniform)
 		H.create_kg()
 		H.can_stand = 0
 		H.sleeping = 500
@@ -539,11 +539,18 @@
 	var/list/mercList = list("Mercenary")
 	if(migclass)
 		return
+
 	if(reddawn_merc.Find(src.ckey))
+		mercList.Add("Ex-Red Dawn Mercenary")
+		mercList.Add("Child Soldier")
+	else
 		mercList.Add("Ex-Red Dawn Mercenary")
 		mercList.Add("Child Soldier")
 	if(seaspotter_merc.Find(src.ckey))
 		mercList.Add("Ex-Seaspotter Mercenary")
+	else
+		mercList.Add("Ex-Seaspotter Mercenary")
+
 	sleep(10)
 	if(migclass)
 		return
@@ -557,11 +564,13 @@
 			src.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/leather(src), slot_wear_suit)
 			src.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet(src), slot_wrist_l)
 			src.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/merc_boots(src), slot_shoes)
+			src.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(src), slot_w_uniform)
 		if("Ex-Red Dawn Mercenary")
 			src.job = "Mercenary"
 			src.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/leather/reddawn(src), slot_wear_suit)
 			src.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet(src), slot_wrist_l)
 			src.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(src), slot_shoes)
+			src.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(src), slot_w_uniform)
 
 			src.my_skills.ADD_SKILL(SKILL_CLIMB, 4)
 			src.my_skills.ADD_SKILL(SKILL_RANGE, 2)
@@ -572,18 +581,22 @@
 			src.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/leather/seaspotter(src), slot_wear_suit)
 			src.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet(src), slot_wrist_l)
 			src.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/jackboots(src), slot_shoes)
+			src.equip_to_slot_or_del(new /obj/item/clothing/under/rank/security(src), slot_w_uniform)
 
 			src.my_skills.ADD_SKILL(SKILL_SWIM, 4)
 			src.my_skills.ADD_SKILL(SKILL_RANGE, 1)
 
 		if("Child Soldier")
 			src.job = "Mercenary"
+			src.set_species("Child")
 			src.equip_to_slot_or_del(new /obj/item/clothing/head/armingcap(src), slot_head)
 			src.equip_to_slot_or_del(new /obj/item/clothing/suit/child_coldsuit(src), slot_wear_suit)
 			src.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet(src), slot_wrist_l)
 			src.equip_to_slot_or_del(new /obj/item/clothing/under/urchin(src), slot_w_uniform)
 			src.equip_to_slot_or_del(new /obj/item/clothing/shoes/lw/child/miner(src), slot_shoes)
-
+			src.my_stats.st -= 2
+			src.my_stats.ht -= 2
+			src.my_stats.it -= 2
 			src.my_skills.ADD_SKILL(SKILL_STEAL, 6)
 			src.terriblethings = FALSE
 			src.my_skills.ADD_SKILL(SKILL_RANGE, 5)
