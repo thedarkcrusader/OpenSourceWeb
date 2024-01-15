@@ -188,3 +188,42 @@
 	recoil = 1.35
 	weight = 8
 	mode = 1
+
+//Allah combat/
+/obj/item/weapon/gun/projectile/automatic/ak47
+	name = "\improper Mamluk Scorcher K431"
+	desc = "A Mamluk Scorcher K431 fully-automatic rifle. its its decently heavy but its round and simplness is what found it widespread use across empires"
+	icon = 'icons/soviets.dmi'
+	icon_state = "ak47"
+	item_state = "ak47"
+	wielded_icon = "biggun-wielded"
+	w_class = 3.0
+	slot_flags = SLOT_BACK
+	origin_tech = "combat=5;materials=2"
+	fire_sound = 'Gunshot4.ogg'
+	caliber = ".762"
+	mag_type = /obj/item/ammo_magazine/external/ak/lowtech
+	item_worth = 350
+	recoil = 1.35
+	jam_chance = 50
+	weight = 8
+	mode = 1
+	
+
+
+/obj/item/ammo_magazine/external/ak/lowtech
+	name = "magazine (7.62)"
+	icon_state = "akorange"
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = ".762"
+	max_ammo = 30
+	multiple_sprites = 9
+	
+/obj/item/ammo_magazine/external/ak/lowtech
+	name = "magazine Riotgrade (7.62)"
+	icon_state = "akorange"
+	ammo_type = /obj/item/ammo_casing/a762/riot
+	caliber = ".762"
+	max_ammo = 30
+	multiple_sprites = 9
+	

@@ -88,7 +88,7 @@ datum/job/ordinator
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/soulbreaker(H), slot_r_hand)
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/security/soulbreaker/garrison(H), slot_wear_suit)
 		H.equip_to_slot_or_del(new /obj/item/device/radio/headset/bracelet/security(H), slot_wrist_r)
-		H.equip_to_slot_or_del(new /obj/item/weapon/gun/energy/taser/MERCY/pistol(H), slot_belt) // IT'S A NERF, DUDE
+		H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/automatic/ak47(H), slot_belt) // IT'S A NERF, DUDE
 		H.equip_to_slot_or_del(new /obj/item/sheath/scimitar(H), slot_l_hand)
 		H.my_skills.CHANGE_SKILL(SKILL_MELEE, 12)
 		H.my_skills.CHANGE_SKILL(SKILL_RANGE, 11)

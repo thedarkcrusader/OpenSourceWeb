@@ -97,7 +97,21 @@
 	weaken = 15
 
 /obj/item/projectile/bullet/a762
-	damage = 25
+	damage = 55
+	agony = 30
+
+
+
+
+/obj/item/projectile/bullet/a762/riot
+	damage = 55
+	stun = 0
+	weaken = 0
+	agony = 30
+	stutter = 40
+	embed = 1
+	sharp = 0
+	edge = 0
 
 /obj/item/projectile/bullet/fire
 	damage = 25
