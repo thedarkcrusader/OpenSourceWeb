@@ -158,7 +158,7 @@
 /obj/item/ammo_casing/shotgun/dartpreloaded/metalfoam
 	projectile_type = /obj/item/projectile/bullet/dart/metalfoam
 
-/obj/item/ammo_casing/a762/riot
+/obj/item/ammo_casing/a762
 	desc = "A 7.62 bullet casing."
 	caliber = ".762"
 	projectile_type = /obj/item/projectile/bullet/princess

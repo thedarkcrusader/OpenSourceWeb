@@ -205,7 +205,7 @@
 	mag_type = /obj/item/ammo_magazine/external/ak/lowtech
 	item_worth = 350
 	recoil = 1.35
-	jam_chance = 50
+	jam_chance = 20
 	weight = 8
 	mode = 1
 	
@@ -219,7 +219,7 @@
 	max_ammo = 30
 	multiple_sprites = 9
 	
-/obj/item/ammo_magazine/external/ak/lowtech
+/obj/item/ammo_magazine/external/ak/lowtech/riot
 	name = "magazine Riotgrade (7.62)"
 	icon_state = "akorange"
 	ammo_type = /obj/item/ammo_casing/a762/riot
